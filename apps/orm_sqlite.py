@@ -13,7 +13,7 @@ from peewee import (
     chunked
 )
 
-database_path = "jq_database.db"
+database_path = "../jq_database.db"
 db = SqliteDatabase(database_path)
 
 

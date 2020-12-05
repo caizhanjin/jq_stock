@@ -1,4 +1,4 @@
-from jq_stock.orm_sqlite import JqBarData, JqStockInfo
+from apps.orm_sqlite import JqBarData, JqStockInfo
 from peewee import JOIN
 import pandas as pd
 
@@ -18,15 +18,6 @@ def test():
         .order_by(JqBarData.money.desc())
     )
     bar_dict = []
-    # change_dict = {
-    #     "base": {
-    #         "count": 0,
-    #         "up": {"count": 0, "list": []},
-    #         "down": {"count": 0, "list": []},
-    #         "stay": {"count": 0, "list": []},
-    #     },
-    #
-    # }
 
     for bar in bar_list:
         # 涨幅
@@ -34,19 +25,6 @@ def test():
             change_percent = round((bar.close - bar.pre_close) / bar.pre_close * 100, 2)
         else:
             change_percent = 0
-
-        # change_dict["base"]["count"] += 1
-        # if change_percent > 0:
-        #     change_dict["base"]["up"]["count"] += 1
-        #     change_dict["base"]["up"]["list"].append(bar.index)
-        #
-        # elif change_percent < 0:
-        #     change_dict["base"]["down"]["count"] += 1
-        #     change_dict["base"]["down"]["list"].append(bar.index)
-        #
-        # else:
-        #     change_dict["base"]["stay"]["count"] += 1
-        #     change_dict["base"]["stay"]["list"].append(bar.index)
 
         bar_dict.append({
             "index": bar.index,
@@ -69,10 +47,7 @@ def test():
             "sw_l3_name": "" if not bar.jqstockinfo else bar.jqstockinfo.sw_l3_name,
 
         })
-    # , columns = [
-    #     "index", "datetime", "interval", "open", "close", "low",
-    #     "high", "volume", "money", "pre_close", "change_percent",
-    #     "display_name", "zjw_name", "sw_l1_name", "sw_l2_name", "sw_l3_name"]
+
     df = pd.DataFrame.from_dict(bar_dict, orient="columns")
 
     change_dict = {
@@ -102,6 +77,10 @@ def test():
     pass
 
 
-if __name__ == '__main__':
+def main():
     test()
+
+
+if __name__ == '__main__':
+    main()
     pass

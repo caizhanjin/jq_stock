@@ -1,8 +1,8 @@
 from datetime import datetime
 from time import sleep
 
-from jq_stock.utility import save_json, load_json
-from jq_stock.orm_sqlite import JqBarData, chunked, db, JqStockInfo
+from utils.utility import save_json, load_json
+from apps.orm_sqlite import JqBarData, chunked, db, JqStockInfo
 
 from jqdatasdk import *
 
@@ -36,24 +36,24 @@ def save_stocks_info():
             "end_date": row["end_date"].strftime("%Y-%m-%d %H:%M:%S"),
             "type": row["type"],
         }
-    save_json("data/stocks_info.json", stocks_dict)
+    save_json("../data/stocks_info.json", stocks_dict)
     print("股票详情数据更新完毕")
 
 
 def save_industry_info():
     """保存股票行业数据"""
-    stocks_info = load_json("data/stocks_info.json")
+    stocks_info = load_json("../data/stocks_info.json")
     stocks_index_list = list(stocks_info.keys())
     industry_info = get_industry(stocks_index_list, date=None)
 
-    save_json("data/industry_info.json", industry_info)
+    save_json("../data/industry_info.json", industry_info)
     print("股票行业数据更新完毕")
 
 
 def save_history_data(interval="1d"):
     default_start_date = "2020-10-1"
 
-    stocks_info = load_json("data/stocks_info.json")
+    stocks_info = load_json("../data/stocks_info.json")
     stocks = list(stocks_info.keys())
     stocks_count = len(stocks)
     sync_num = 1
@@ -119,7 +119,7 @@ def save_history_data2(interval="1d"):
     default_start_date = "2020-12-1"
     end_date = datetime.now().strftime("%Y-%m-%d")
 
-    stocks_info = load_json("data/stocks_info.json")
+    stocks_info = load_json("../data/stocks_info.json")
     stocks = list(stocks_info.keys())
 
     history_data = get_price(
@@ -166,8 +166,8 @@ def save_history_data2(interval="1d"):
 
 
 def save_stock_info_to_database():
-    stocks_info = load_json("data/stocks_info.json")
-    industry_info = load_json("data/industry_info.json")
+    stocks_info = load_json("../data/stocks_info.json")
+    industry_info = load_json("../data/industry_info.json")
     stocks_dict = []
 
     for index, item in stocks_info.items():
