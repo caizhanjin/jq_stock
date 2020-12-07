@@ -1,13 +1,15 @@
 """
 数据分析统计脚本
 """
-from apps.orm_sqlite import JqBarData, JqStockInfo
+from apps.orm_sqlite import JqBarData, JqStockInfo, StatDailyData
 from peewee import JOIN
 import pandas as pd
 import os
 
 
-def stat_script_main(stat_date="2020-12-01 00:00:00"):
+def stat_script_main(stat_date):
+    print(f"\n开始统计 {stat_date} 数据...")
+
     bar_list = (
         JqBarData.select(JqBarData, JqStockInfo)
         .join(
@@ -100,14 +102,45 @@ def stat_script_main(stat_date="2020-12-01 00:00:00"):
               f"详情：{change_dict[key]['info']}")
 
     # excel_writer初始化
-    excel_name = f"{date[:10]}_" \
+    excel_name = f"{stat_date}_" \
                  f"{df[(df['money'] >= 2000000000.0)].shape[0]}_" \
                  f"{df[(df['money'] >= 200000000.0)].shape[0]}_" \
                  f"{df[(df['money'] >= 100000000.0)].shape[0]}.xlsx"
     excel_writer = pd.ExcelWriter(os.path.join("output_data", excel_name))
     df.to_excel(excel_writer, "All")  # 所有数据写入
 
+    # daily_data数据查询和导出
+    queryset = (
+        StatDailyData.select()
+        .where((StatDailyData.stat_date <= stat_date))
+        .order_by(StatDailyData.stat_date.desc())
+        .limit(60)
+    )
+    daily_list = [
+        {
+            "stat_date": i.stat_date,
+
+            "science_money": i.science_money,
+            "etf50_money": i.etf50_money,
+            "if300_money": i.if300_money,
+            "csi500_money": i.csi500_money,
+
+            "front10_money": i.front10_money,
+            "front15_money": i.front15_money,
+            "front20_money": i.front20_money,
+        }
+        for i in queryset
+    ]
+    df_daily = pd.DataFrame.from_dict(daily_list, orient="columns")
+    df_daily.set_index(["stat_date"], inplace=True)
+    df_daily.to_excel(excel_writer, "daily_data")
+
     # 成交额统计2
+    print(f"\n成交金额统计："
+          f"前10总成交金额：{df[:10]['money'].sum()}，"
+          f"前15总成交金额：{df[:15]['money'].sum()}，"
+          f"前20总成交金额：{df[:20]['money'].sum()}，")
+
     # 00000000.0
     money_stat = {}
     _df = df[(df["money"] >= 10000000000.0)]
@@ -140,18 +173,13 @@ def stat_script_main(stat_date="2020-12-01 00:00:00"):
 
     print(f"\n成交额区间划分：{money_stat}")
 
-    print(f"\n成交金额统计："
-          f"前10总和，"
-          f"前15总和，"
-          f"前20总和")
-
     excel_writer.save()
     pass
 
 
 def main():
     # 统计脚本（主）
-    stat_script_main(stat_date="2020-12-01 00:00:00")
+    stat_script_main(stat_date="2020-12-07")
 
 
 if __name__ == '__main__':
