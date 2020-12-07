@@ -3997,30 +3997,10 @@
             "industry_name": "信息技术指数"
         }
     },
-    "603516.XSHG": {
-        "sw_l1": {
-            "industry_code": "801750",
-            "industry_name": "计算机I"
-        },
-        "sw_l2": {
-            "industry_code": "801101",
-            "industry_name": "计算机设备II"
-        },
-        "sw_l3": {
-            "industry_code": "851021",
-            "industry_name": "计算机设备III"
-        },
+    "601686.XSHG": {
         "zjw": {
-            "industry_code": "C39",
-            "industry_name": "计算机、通信和其他电子设备制造业"
-        },
-        "jq_l2": {
-            "industry_code": "HY596",
-            "industry_name": "电子设备和仪器指数"
-        },
-        "jq_l1": {
-            "industry_code": "HY008",
-            "industry_name": "信息技术指数"
+            "industry_code": "C33",
+            "industry_name": "金属制品业"
         }
     },
     "605388.XSHG": {
@@ -7393,6 +7373,12 @@
         "jq_l1": {
             "industry_code": "HY001",
             "industry_name": "能源指数"
+        }
+    },
+    "300912.XSHE": {
+        "zjw": {
+            "industry_code": "N77",
+            "industry_name": "生态保护和环境治理业"
         }
     },
     "002889.XSHE": {
@@ -12615,6 +12601,12 @@
         "jq_l1": {
             "industry_code": "HY006",
             "industry_name": "医疗保健指数"
+        }
+    },
+    "605183.XSHG": {
+        "zjw": {
+            "industry_code": "C26",
+            "industry_name": "化学原料和化学制品制造业"
         }
     },
     "000859.XSHE": {
@@ -50434,6 +50426,12 @@
             "industry_name": "工业指数"
         }
     },
+    "605258.XSHG": {
+        "zjw": {
+            "industry_code": "C39",
+            "industry_name": "计算机、通信和其他电子设备制造业"
+        }
+    },
     "603477.XSHG": {
         "sw_l1": {
             "industry_code": "801130",
@@ -54632,6 +54630,12 @@
             "industry_name": "信息技术指数"
         }
     },
+    "003021.XSHE": {
+        "zjw": {
+            "industry_code": "C38",
+            "industry_name": "电气机械和器材制造业"
+        }
+    },
     "002302.XSHE": {
         "sw_l1": {
             "industry_code": "801710",
@@ -58450,6 +58454,12 @@
         "jq_l1": {
             "industry_code": "HY002",
             "industry_name": "材料指数"
+        }
+    },
+    "300911.XSHE": {
+        "zjw": {
+            "industry_code": "C38",
+            "industry_name": "电气机械和器材制造业"
         }
     },
     "300449.XSHE": {
@@ -69682,6 +69692,12 @@
         "jq_l1": {
             "industry_code": "HY011",
             "industry_name": "房地产指数"
+        }
+    },
+    "300913.XSHE": {
+        "zjw": {
+            "industry_code": "C38",
+            "industry_name": "电气机械和器材制造业"
         }
     },
     "300116.XSHE": {
@@ -86420,6 +86436,32 @@
             "industry_name": "材料指数"
         }
     },
+    "603516.XSHG": {
+        "sw_l1": {
+            "industry_code": "801750",
+            "industry_name": "计算机I"
+        },
+        "sw_l2": {
+            "industry_code": "801101",
+            "industry_name": "计算机设备II"
+        },
+        "sw_l3": {
+            "industry_code": "851021",
+            "industry_name": "计算机设备III"
+        },
+        "zjw": {
+            "industry_code": "C39",
+            "industry_name": "计算机、通信和其他电子设备制造业"
+        },
+        "jq_l2": {
+            "industry_code": "HY596",
+            "industry_name": "电子设备和仪器指数"
+        },
+        "jq_l1": {
+            "industry_code": "HY008",
+            "industry_name": "信息技术指数"
+        }
+    },
     "002573.XSHE": {
         "sw_l1": {
             "industry_code": "801160",
@@ -90378,6 +90420,24 @@
         "jq_l1": {
             "industry_code": "HY005",
             "industry_name": "日常消费指数"
+        }
+    },
+    "688590.XSHG": {
+        "zjw": {
+            "industry_code": "I65",
+            "industry_name": "软件和信息技术服务业"
+        },
+        "sw_l1": {
+            "industry_code": "801750",
+            "industry_name": "计算机I"
+        },
+        "sw_l2": {
+            "industry_code": "801222",
+            "industry_name": "计算机应用II"
+        },
+        "sw_l3": {
+            "industry_code": "852225",
+            "industry_name": "软件开发III"
         }
     },
     "600415.XSHG": {

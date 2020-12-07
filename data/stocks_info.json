@@ -11895,6 +11895,14 @@
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },
+    "003021.XSHE": {
+        "index": "003021.XSHE",
+        "display_name": "兆威机电",
+        "name": "ZWJD",
+        "start_date": "2020-12-04 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
     "003816.XSHE": {
         "index": "003816.XSHE",
         "display_name": "中国广核",
@@ -17465,8 +17473,8 @@
     },
     "300703.XSHE": {
         "index": "300703.XSHE",
-        "display_name": "创源文化",
-        "name": "CYWH",
+        "display_name": "创源股份",
+        "name": "CYGF",
         "start_date": "2017-09-19 00:00:00",
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
@@ -18980,6 +18988,30 @@
         "display_name": "瑞丰新材",
         "name": "RFXC",
         "start_date": "2020-11-27 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
+    "300911.XSHE": {
+        "index": "300911.XSHE",
+        "display_name": "亿田智能",
+        "name": "YTZN",
+        "start_date": "2020-12-03 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
+    "300912.XSHE": {
+        "index": "300912.XSHE",
+        "display_name": "凯龙高科",
+        "name": "KLGK",
+        "start_date": "2020-12-07 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
+    "300913.XSHE": {
+        "index": "300913.XSHE",
+        "display_name": "兆龙互连",
+        "name": "ZLHL",
+        "start_date": "2020-12-07 00:00:00",
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },
@@ -26943,6 +26975,14 @@
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },
+    "601686.XSHG": {
+        "index": "601686.XSHG",
+        "display_name": "友发集团",
+        "name": "YFJT",
+        "start_date": "2020-12-04 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
     "601688.XSHG": {
         "index": "601688.XSHG",
         "display_name": "华泰证券",
@@ -31831,6 +31871,14 @@
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },
+    "605183.XSHG": {
+        "index": "605183.XSHG",
+        "display_name": "确成股份",
+        "name": "QCGF",
+        "start_date": "2020-12-07 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
     "605188.XSHG": {
         "index": "605188.XSHG",
         "display_name": "国光连锁",
@@ -31876,6 +31924,14 @@
         "display_name": "天普股份",
         "name": "TPGF",
         "start_date": "2020-08-25 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
+    "605258.XSHG": {
+        "index": "605258.XSHG",
+        "display_name": "协和电子",
+        "name": "XHDZ",
+        "start_date": "2020-12-03 00:00:00",
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },
@@ -33484,6 +33540,14 @@
         "display_name": "力合微",
         "name": "LHW",
         "start_date": "2020-07-22 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
+    "688590.XSHG": {
+        "index": "688590.XSHG",
+        "display_name": "新致软件",
+        "name": "XZRJ",
+        "start_date": "2020-12-07 00:00:00",
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },

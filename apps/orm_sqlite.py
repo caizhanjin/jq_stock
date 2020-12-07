@@ -1,5 +1,5 @@
 import json
-from datetime import datetime
+from datetime import datetime, date
 
 from peewee import (
     AutoField,
@@ -10,7 +10,8 @@ from peewee import (
     Model,
     SqliteDatabase,
     BooleanField,
-    chunked
+    chunked,
+    DateField
 )
 
 database_path = "../jq_database.db"
@@ -18,6 +19,7 @@ db = SqliteDatabase(database_path)
 
 
 class JqBarData(Model):
+    """聚宽历史数据表"""
     id = AutoField()
 
     index: str = CharField()
@@ -44,6 +46,7 @@ class JqBarData(Model):
 
 
 class JqStockInfo(Model):
+    """聚宽股票详情表"""
     id = AutoField()
 
     index: str = CharField()
@@ -73,8 +76,29 @@ class JqStockInfo(Model):
         indexes = ((("index", ), True),)
 
 
+class StatDailyData(Model):
+    """天单位统计数据表"""
+    id = AutoField()
+
+    stat_date: date = DateField(null=True)
+
+    science_money: float = FloatField(null=True)  # 科创板 000688 成交额
+    etf50_money: float = FloatField(null=True)  # 上证50 000016 成交额
+    if300_money: float = FloatField(null=True)  # 沪深300 000300 成交额
+    csi500_money: float = FloatField(null=True)  # 中证500 399905 成交额
+
+    front10_money: float = FloatField(null=True)  # 当日成交额前10总和
+    front15_money: float = FloatField(null=True)  # 当日成交额前15总和
+    front20_money: float = FloatField(null=True)  # 当日成交额前20总和
+
+    class Meta:
+        database = db
+        indexes = ((("stat_date", ), True),)
+
+
 if __name__ == '__main__':
     # create table
     db.connect()
     # db.create_tables([JqBarData])
-    db.create_tables([JqStockInfo])
+    # db.create_tables([JqStockInfo])
+    db.create_tables([StatDailyData])

@@ -1,12 +1,13 @@
+"""
+数据分析统计脚本
+"""
 from apps.orm_sqlite import JqBarData, JqStockInfo
 from peewee import JOIN
 import pandas as pd
+import os
 
 
-def test():
-
-    date = "2020-12-01 00:00:00"
-
+def stat_script_main(stat_date="2020-12-01 00:00:00"):
     bar_list = (
         JqBarData.select(JqBarData, JqStockInfo)
         .join(
@@ -14,7 +15,7 @@ def test():
             on=(JqBarData.index == JqStockInfo.index),
             join_type=JOIN.LEFT_OUTER
         )
-        .where((JqBarData.datetime == date) & (JqStockInfo.type == "stock"))
+        .where((JqBarData.datetime == stat_date) & (JqStockInfo.type == "stock"))
         .order_by(JqBarData.money.desc())
     )
     bar_dict = []
@@ -27,58 +28,130 @@ def test():
             change_percent = 0
 
         bar_dict.append({
-            "index": bar.index,
-            "datetime": bar.datetime.strftime("%Y-%m-%d %H:%M:%S"),
-            "interval": bar.interval,
+            "code": bar.index,
+            "display_name": "" if not bar.jqstockinfo else bar.jqstockinfo.display_name,
+            "change_percent": change_percent,
+            "money": 0 if not bar.money else bar.money,
+            # "datetime": bar.datetime.strftime("%Y-%m-%d %H:%M:%S"),
+            # "interval": bar.interval,
 
             "open": bar.open,
             "close": bar.close,
             "low": bar.low,
             "high": bar.high,
             "volume": bar.volume,
-            "money": bar.money,
             "pre_close": bar.pre_close,
-            "change_percent": change_percent,
 
-            "display_name": "" if not bar.jqstockinfo else bar.jqstockinfo.display_name,
             "zjw_name": "" if not bar.jqstockinfo else bar.jqstockinfo.zjw_name,
             "sw_l1_name": "" if not bar.jqstockinfo else bar.jqstockinfo.sw_l1_name,
             "sw_l2_name": "" if not bar.jqstockinfo else bar.jqstockinfo.sw_l2_name,
             "sw_l3_name": "" if not bar.jqstockinfo else bar.jqstockinfo.sw_l3_name,
-
         })
 
     df = pd.DataFrame.from_dict(bar_dict, orient="columns")
+    df.set_index(["code"], inplace=True)
+    df.sort_values(by=["money"], ascending=[False], inplace=True)
 
+    # 成交额统计1
+    print(f"\n当日成交额大于2亿：{df[(df['money'] >= 200000000.0)].shape[0]}，"
+          f"\n成交金额大于1亿：{df[(df['money'] >= 100000000.0)].shape[0]}")
+
+    df_20 = df[df["money"] >= 2000000000.0]
+    print(f"\n成交额20亿以上："
+          f"上涨：{df_20[(df_20['change_percent'] > 0)].shape[0]}，"
+          f"下跌：{df_20[(df_20['change_percent'] < 0)].shape[0]}，"
+          f"平：{df_20[(df_20['change_percent'] == 0)].shape[0]}")
+
+    # 成交前100、200涨跌家数和区间统计
     change_dict = {
-        "base": {
-            "count": df.shape[0],
-            "up": df[(df["change_percent"] > 0)].shape[0],
-            "down": df[(df["change_percent"] < 0)].shape[0],
-            "stay": df[(df["change_percent"] == 0)].shape[0],
-            "info": {
-                "涨停": df[(df["change_percent"] >= 10)].shape[0],
-                "7~10%": df[(df["change_percent"] >= 7) & (df["change_percent"] < 10)].shape[0],
-                "5~7%": df[(df["change_percent"] >= 5) & (df["change_percent"] < 7)].shape[0],
-                "2~5%": df[(df["change_percent"] >= 2) & (df["change_percent"] < 5)].shape[0],
-                "0~2%": df[(df["change_percent"] > 0) & (df["change_percent"] < 2)].shape[0],
-                "平": df[(df["change_percent"] == 0)].shape[0],
-                "-0~2%": df[(df["change_percent"] > -2) & (df["change_percent"] < 0)].shape[0],
-                "-2~5%": df[(df["change_percent"] > -5) & (df["change_percent"] <= -2)].shape[0],
-                "-5~7%": df[(df["change_percent"] > -7) & (df["change_percent"] <= -5)].shape[0],
-                "-7~10%": df[(df["change_percent"] > -10) & (df["change_percent"] <= -7)].shape[0],
-                "跌停": df[(df["change_percent"] <= -10)].shape[0],
-            },
-        },
-
+        "前100": {},
+        "前200": {},
+    }
+    df_dict = {
+        "前100": df[:100],
+        "前200": df[:200],
     }
 
-    print(change_dict["base"])
+    for key, item in change_dict.items():
+        change_df = df_dict[key]
+        change_dict[key] = {
+            "overall": {
+                "count": change_df.shape[0],
+                "up": change_df[(change_df["change_percent"] > 0)].shape[0],
+                "down": change_df[(change_df["change_percent"] < 0)].shape[0],
+                "stay": change_df[(change_df["change_percent"] == 0)].shape[0],
+            },
+            "info": {
+                "涨停": change_df[(change_df["change_percent"] >= 9.9)].shape[0],
+                "7~9.9%": change_df[(change_df["change_percent"] >= 7) & (change_df["change_percent"] < 9.9)].shape[0],
+                "5~7%": change_df[(change_df["change_percent"] >= 5) & (change_df["change_percent"] < 7)].shape[0],
+                "2~5%": change_df[(change_df["change_percent"] >= 2) & (change_df["change_percent"] < 5)].shape[0],
+                "0~2%": change_df[(change_df["change_percent"] > 0) & (change_df["change_percent"] < 2)].shape[0],
+                "平": change_df[(change_df["change_percent"] == 0)].shape[0],
+                "-0~2%": change_df[(change_df["change_percent"] > -2) & (change_df["change_percent"] < 0)].shape[0],
+                "-2~5%": change_df[(change_df["change_percent"] > -5) & (change_df["change_percent"] <= -2)].shape[0],
+                "-5~7%": change_df[(change_df["change_percent"] > -7) & (change_df["change_percent"] <= -5)].shape[0],
+                "-7~9.9%": change_df[(change_df["change_percent"] > -9.9) & (change_df["change_percent"] <= -7)].shape[0],
+                "跌停": change_df[(change_df["change_percent"] <= -9.9)].shape[0],
+            }
+        }
+        print(f"\n{key}涨跌家数和区间统计>>\n"
+              f"总览：{change_dict[key]['overall']}\n"
+              f"详情：{change_dict[key]['info']}")
+
+    # excel_writer初始化
+    excel_name = f"{date[:10]}_" \
+                 f"{df[(df['money'] >= 2000000000.0)].shape[0]}_" \
+                 f"{df[(df['money'] >= 200000000.0)].shape[0]}_" \
+                 f"{df[(df['money'] >= 100000000.0)].shape[0]}.xlsx"
+    excel_writer = pd.ExcelWriter(os.path.join("output_data", excel_name))
+    df.to_excel(excel_writer, "All")  # 所有数据写入
+
+    # 成交额统计2
+    # 00000000.0
+    money_stat = {}
+    _df = df[(df["money"] >= 10000000000.0)]
+    money_stat["100亿以上"] = _df.shape[0]
+    _df.to_excel(excel_writer, f"100亿以上")
+
+    _df = df[(df["money"] >= 8000000000.0) & (df["money"] < 10000000000.0)]
+    money_stat["80(含)~100亿"] = _df.shape[0]
+    _df.to_excel(excel_writer, f"80(含)~100亿")
+
+    _df = df[(df["money"] >= 5000000000.0) & (df["money"] < 8000000000.0)]
+    money_stat["50(含)~80亿"] = _df.shape[0]
+    _df.to_excel(excel_writer, f"50(含)~80亿")
+
+    _df = df[(df["money"] >= 5000000000.0) & (df["money"] < 8000000000.0)]
+    money_stat["50(含)~80亿"] = _df.shape[0]
+    _df.to_excel(excel_writer, f"50(含)~80亿")
+
+    _df = df[(df["money"] >= 4000000000.0) & (df["money"] < 5000000000.0)]
+    money_stat["40(含)~50亿"] = _df.shape[0]
+    _df.to_excel(excel_writer, f"40(含)~50亿")
+
+    _df = df[(df["money"] >= 3000000000.0) & (df["money"] < 4000000000.0)]
+    money_stat["30(含)~40亿"] = _df.shape[0]
+    _df.to_excel(excel_writer, f"30(含)~40亿")
+
+    _df = df[(df["money"] >= 2000000000.0) & (df["money"] < 3000000000.0)]
+    money_stat["20(含)~30亿"] = _df.shape[0]
+    _df.to_excel(excel_writer, f"20(含)~30亿")
+
+    print(f"\n成交额区间划分：{money_stat}")
+
+    print(f"\n成交金额统计："
+          f"前10总和，"
+          f"前15总和，"
+          f"前20总和")
+
+    excel_writer.save()
     pass
 
 
 def main():
-    test()
+    # 统计脚本（主）
+    stat_script_main(stat_date="2020-12-01 00:00:00")
 
 
 if __name__ == '__main__':

@@ -1,3 +1,6 @@
+"""
+聚宽数据同步脚本
+"""
 from datetime import datetime
 from time import sleep
 
@@ -5,6 +8,9 @@ from utils.utility import save_json, load_json
 from apps.orm_sqlite import JqBarData, chunked, db, JqStockInfo
 
 from jqdatasdk import *
+
+# 登录聚宽账号
+auth("18813937194", "bubiou123@J")
 
 
 def save_sw_three():
@@ -50,11 +56,14 @@ def save_industry_info():
     print("股票行业数据更新完毕")
 
 
-def save_history_data(interval="1d"):
+def save_history_data(stock=None, stocks=None, interval="1d"):
+    """同步指定股票最新数据"""
+    print("开始同步最新数据...")
     default_start_date = "2020-10-1"
 
-    stocks_info = load_json("../data/stocks_info.json")
-    stocks = list(stocks_info.keys())
+    if stock is not None:
+        stocks = [stock]
+
     stocks_count = len(stocks)
     sync_num = 1
 
@@ -115,16 +124,16 @@ def save_history_data(interval="1d"):
         sleep(1)
 
 
-def save_history_data2(interval="1d"):
-    default_start_date = "2020-12-1"
-    end_date = datetime.now().strftime("%Y-%m-%d")
-
-    stocks_info = load_json("../data/stocks_info.json")
-    stocks = list(stocks_info.keys())
+def save_history_data2(start_date="2020-12-1", end_date=None, stocks=None, interval="1d"):
+    if end_date is None:
+        end_date = datetime.now().strftime("%Y-%m-%d")
+    if stocks is None:
+        stocks_info = load_json("../data/stocks_info.json")
+        stocks = list(stocks_info.keys())
 
     history_data = get_price(
         security=stocks,
-        start_date=default_start_date,
+        start_date=start_date,
         end_date=end_date,
         frequency=interval,
         fields=['open', 'close', 'low', 'high', 'volume', 'money',
@@ -162,61 +171,23 @@ def save_history_data2(interval="1d"):
         for c in chunked(history_data_dict, 50):
             JqBarData.insert_many(c).on_conflict_replace().execute()
 
-    print(f"总 {len(stocks)} 个，从 {default_start_date} 到 {end_date} {len(history_data_dict)} 条数据同步完毕...")
-
-
-def save_stock_info_to_database():
-    stocks_info = load_json("../data/stocks_info.json")
-    industry_info = load_json("../data/industry_info.json")
-    stocks_dict = []
-
-    for index, item in stocks_info.items():
-        _industry_info = industry_info.get(index, {})
-        sw_l1 = _industry_info.get("sw_l1", {})
-        sw_l2 = _industry_info.get("sw_l2", {})
-        sw_l3 = _industry_info.get("sw_l3", {})
-        zjw = _industry_info.get("zjw", {})
-        jq_l1 = _industry_info.get("jq_l1", {})
-        jq_l2 = _industry_info.get("jq_l2", {})
-
-        stocks_dict.append({
-            "index": item.get("index"),
-            "display_name": item.get("display_name"),
-            "name": item.get("name"),
-            "start_date": item.get("start_date"),
-            "end_date": item.get("end_date"),
-            "type": item.get("type"),
-
-            "sw_l1_code": sw_l1.get("industry_code"),
-            "sw_l1_name": sw_l1.get("industry_name"),
-            "sw_l2_code": sw_l2.get("industry_code"),
-            "sw_l2_name": sw_l2.get("industry_name"),
-            "sw_l3_code": sw_l3.get("industry_code"),
-            "sw_l3_name": sw_l3.get("industry_name"),
-            "zjw_code": zjw.get("industry_code"),
-            "zjw_name": zjw.get("industry_name"),
-            "jq_l1_code": jq_l1.get("industry_code"),
-            "jq_l1_name": jq_l1.get("industry_name"),
-            "jq_l2_code": jq_l2.get("industry_code"),
-            "jq_l2_name": jq_l2.get("industry_name"),
-        })
-        pass
-
-    with db.atomic():
-        for c in chunked(stocks_dict, 50):
-            JqStockInfo.insert_many(c).on_conflict_replace().execute()
-
-    print(f"总 {len(stocks_info.keys())} 条数据同步完毕...")
+    print(f"总 {len(stocks)} 个，从 {start_date} 到 {end_date} {len(history_data_dict)} 条数据同步完毕...")
 
 
 def main():
-    # auth("18813937194", "bubiou123@J")
     # sw_dict = load_json("sw_3_info.json")
     # test_stock = sw_dict["851731"]
-    # save_stocks_info()
-    # save_industry_info()
-    # save_history_data2()
-    save_stock_info_to_database()
+
+    # 基础数据准备
+    # save_stocks_info()  # 保存股票详情
+    # save_industry_info()  # 保存行业基础数据
+
+    # 同步指定股票最新数据
+    # save_history_data(stock="000012.XSHE")
+    # 批量更新股票历史数据(所有)
+    # save_history_data2(start_date="2020-12-01", end_date=None)
+    save_history_data2(start_date="2020-11-15", end_date="2020-12-01")
+
     pass
 
 
