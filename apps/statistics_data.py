@@ -5,6 +5,25 @@ from apps.orm_sqlite import JqBarData, JqStockInfo, StatDailyData
 from peewee import JOIN
 import pandas as pd
 import os
+from openpyxl import load_workbook
+from openpyxl.utils import get_column_letter
+
+from utils.utility import load_json
+
+
+def reset_col(filename):
+    wb = load_workbook(filename)
+    for sheet in wb.sheetnames:
+        ws = wb[sheet]
+        df = pd.read_excel(filename, sheet, engine="openpyxl").fillna('-')
+        df.loc[len(df)] = list(df.columns)
+        for col in df.columns:
+            index = list(df.columns).index(col)
+            letter = get_column_letter(index+1)
+            collen = df[col].apply(lambda x: len(str(x).encode())).max()
+            ws.column_dimensions[letter].width = min(collen*1.2, 18)
+
+    wb.save(filename)
 
 
 def stat_script_main(stat_date):
@@ -48,21 +67,73 @@ def stat_script_main(stat_date):
             "sw_l1_name": "" if not bar.jqstockinfo else bar.jqstockinfo.sw_l1_name,
             "sw_l2_name": "" if not bar.jqstockinfo else bar.jqstockinfo.sw_l2_name,
             "sw_l3_name": "" if not bar.jqstockinfo else bar.jqstockinfo.sw_l3_name,
+
+            "is_etf50": "否" if not bar.jqstockinfo else ("是" if bar.jqstockinfo.is_etf50 == 1 else "否"),
+            "is_if300": "否" if not bar.jqstockinfo else ("是" if bar.jqstockinfo.is_if300 == 1 else "否"),
+            "is_csi500": "否" if not bar.jqstockinfo else ("是" if bar.jqstockinfo.is_csi500 == 1 else "否"),
+            "is_science": "否" if not bar.jqstockinfo else ("是" if bar.jqstockinfo.is_science == 1 else "否"),
         })
 
     df = pd.DataFrame.from_dict(bar_dict, orient="columns")
     df.set_index(["code"], inplace=True)
     df.sort_values(by=["money"], ascending=[False], inplace=True)
 
+    # excel_writer初始化
+    excel_name = f"{stat_date}_" \
+                 f"{df[(df['money'] >= 2000000000.0)].shape[0]}_" \
+                 f"{df[(df['money'] >= 200000000.0)].shape[0]}_" \
+                 f"{df[(df['money'] >= 100000000.0)].shape[0]}_" \
+                 f"{int(df[(df['is_etf50'] == '是')]['money'].sum())}_" \
+                 f"{int(df[(df['is_if300'] == '是')]['money'].sum())}_" \
+                 f"{int(df[(df['is_csi500'] == '是')]['money'].sum())}_" \
+                 f"{int(df[(df['is_science'] == '是')]['money'].sum())}" \
+                 f".xlsx"
+    excel_name_path = os.path.join("output_data", excel_name)
+    excel_writer = pd.ExcelWriter(excel_name_path)
+
+    # daily_data数据查询和导出
+    queryset = (
+        StatDailyData.select()
+        .where((StatDailyData.stat_date <= stat_date))
+        .order_by(StatDailyData.stat_date.desc())
+        .limit(60)
+    )
+    daily_list = [
+        {
+            "stat_date": i.stat_date,
+
+            "science_money": i.science_money,
+            "etf50_money": i.etf50_money,
+            "if300_money": i.if300_money,
+            "csi500_money": i.csi500_money,
+
+            "front10_money": i.front10_money,
+            "front15_money": i.front15_money,
+            "front20_money": i.front20_money,
+        }
+        for i in queryset
+    ]
+    df_daily = pd.DataFrame.from_dict(daily_list, orient="columns")
+    df_daily.set_index(["stat_date"], inplace=True)
+    df_daily.to_excel(excel_writer, "daily_data")
+
+    df.to_excel(excel_writer, "All")  # 所有数据写入
+    df.sort_values(["sw_l1_name", "sw_l2_name", "sw_l3_name"], ascending=[1, 1, 1], inplace=True)
+
     # 成交额统计1
-    print(f"\n当日成交额大于2亿：{df[(df['money'] >= 200000000.0)].shape[0]}，"
-          f"\n成交金额大于1亿：{df[(df['money'] >= 100000000.0)].shape[0]}")
+    df_2 = df[(df['money'] >= 200000000.0)]
+    df_1 = df[(df['money'] >= 100000000.0)]
+    print(f"\n当日成交额大于2亿：{df_2.shape[0]}，"
+          f"\n成交金额大于1亿：{df_1.shape[0]}")
+    df_1.to_excel(excel_writer, f"1亿以上")
+    df_2.to_excel(excel_writer, f"2亿以上")
 
     df_20 = df[df["money"] >= 2000000000.0]
     print(f"\n成交额20亿以上："
           f"上涨：{df_20[(df_20['change_percent'] > 0)].shape[0]}，"
           f"下跌：{df_20[(df_20['change_percent'] < 0)].shape[0]}，"
           f"平：{df_20[(df_20['change_percent'] == 0)].shape[0]}")
+    df_20.to_excel(excel_writer, f"20亿以上")
 
     # 成交前100、200涨跌家数和区间统计
     change_dict = {
@@ -100,40 +171,6 @@ def stat_script_main(stat_date):
         print(f"\n{key}涨跌家数和区间统计>>\n"
               f"总览：{change_dict[key]['overall']}\n"
               f"详情：{change_dict[key]['info']}")
-
-    # excel_writer初始化
-    excel_name = f"{stat_date}_" \
-                 f"{df[(df['money'] >= 2000000000.0)].shape[0]}_" \
-                 f"{df[(df['money'] >= 200000000.0)].shape[0]}_" \
-                 f"{df[(df['money'] >= 100000000.0)].shape[0]}.xlsx"
-    excel_writer = pd.ExcelWriter(os.path.join("output_data", excel_name))
-    df.to_excel(excel_writer, "All")  # 所有数据写入
-
-    # daily_data数据查询和导出
-    queryset = (
-        StatDailyData.select()
-        .where((StatDailyData.stat_date <= stat_date))
-        .order_by(StatDailyData.stat_date.desc())
-        .limit(60)
-    )
-    daily_list = [
-        {
-            "stat_date": i.stat_date,
-
-            "science_money": i.science_money,
-            "etf50_money": i.etf50_money,
-            "if300_money": i.if300_money,
-            "csi500_money": i.csi500_money,
-
-            "front10_money": i.front10_money,
-            "front15_money": i.front15_money,
-            "front20_money": i.front20_money,
-        }
-        for i in queryset
-    ]
-    df_daily = pd.DataFrame.from_dict(daily_list, orient="columns")
-    df_daily.set_index(["stat_date"], inplace=True)
-    df_daily.to_excel(excel_writer, "daily_data")
 
     # 成交额统计2
     print(f"\n成交金额统计："
@@ -174,6 +211,7 @@ def stat_script_main(stat_date):
     print(f"\n成交额区间划分：{money_stat}")
 
     excel_writer.save()
+    reset_col(excel_name_path)
     pass
 
 
@@ -183,5 +221,6 @@ def main():
 
 
 if __name__ == '__main__':
+    # reset_col(r"output_data\2020-12-07_43_879_1586.xlsx")
     main()
     pass

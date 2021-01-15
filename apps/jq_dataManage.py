@@ -174,6 +174,17 @@ def save_history_data2(start_date="2020-12-1", end_date=None, stocks=None, inter
     print(f"总 {len(stocks)} 个，从 {start_date} 到 {end_date} {len(history_data_dict)} 条数据同步完毕...")
 
 
+def save_index_stocks(index, meaning):
+    """更新指数股票列表"""
+    index_list = load_json("../data/index_list.json")
+
+    stocks = get_index_stocks(index)
+    index_list[meaning] = stocks
+
+    save_json("../data/index_list.json", index_list)
+    print(f"指数 {index} 股票列表更新完毕")
+
+
 def main():
     # sw_dict = load_json("sw_3_info.json")
     # test_stock = sw_dict["851731"]
@@ -186,7 +197,12 @@ def main():
     # save_history_data(stock="000012.XSHE")
     # 批量更新股票历史数据(所有)
     # save_history_data2(start_date="2020-12-01", end_date=None)
-    save_history_data2(start_date="2020-11-15", end_date="2020-12-01")
+    # save_history_data2(start_date="2020-11-15", end_date="2020-12-01")
+
+    # 更新指数股票列表
+    save_index_stocks("000016.XSHG", "上证50")
+    save_index_stocks("000905.XSHG", "中证500")
+    save_index_stocks("000300.XSHG", "沪深300")
 
     pass
 
@@ -194,5 +210,6 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 

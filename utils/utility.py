@@ -14,8 +14,12 @@ def save_json(filepath, data):
 
 
 def load_json(filepath):
-    with open(filepath, mode="r", encoding="UTF-8") as f:
-        data = json.load(f)
+    try:
+        with open(filepath, mode="r", encoding="UTF-8") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        return {}
+
     return data
 
 

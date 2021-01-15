@@ -11,7 +11,8 @@ from peewee import (
     SqliteDatabase,
     BooleanField,
     chunked,
-    DateField
+    DateField,
+    IntegerField
 )
 
 database_path = "../jq_database.db"
@@ -71,6 +72,11 @@ class JqStockInfo(Model):
     jq_l2_code: str = CharField(null=True)
     jq_l2_name: str = CharField(null=True)
 
+    is_etf50: int = IntegerField(default=2)  # 是否上证50  1是 2不是
+    is_if300: int = IntegerField(default=2)  # 是否沪深300
+    is_csi500: int = IntegerField(default=2)  # 是否中证500
+    is_science: int = IntegerField(default=2)  # 是否科创版
+
     class Meta:
         database = db
         indexes = ((("index", ), True),)
@@ -100,5 +106,5 @@ if __name__ == '__main__':
     # create table
     db.connect()
     # db.create_tables([JqBarData])
-    # db.create_tables([JqStockInfo])
-    db.create_tables([StatDailyData])
+    db.create_tables([JqStockInfo])
+    # db.create_tables([StatDailyData])
