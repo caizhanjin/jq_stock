@@ -31,6 +31,9 @@ def save_sw_three():
 
 def save_stocks_info():
     """保存股票详情数据"""
+    old_stocks = load_json("../data/stocks_info.json")
+    old_stocks_count = list(old_stocks.keys())
+
     stocks = get_all_securities(['stock'])
     stocks_dict = {}
     for index, row in stocks.iterrows():
@@ -190,8 +193,8 @@ def main():
     # test_stock = sw_dict["851731"]
 
     # 基础数据准备
-    # save_stocks_info()  # 保存股票详情
-    # save_industry_info()  # 保存行业基础数据
+    save_stocks_info()  # 保存股票详情
+    save_industry_info()  # 保存行业基础数据
 
     # 同步指定股票最新数据
     # save_history_data(stock="000012.XSHE")
