@@ -11999,6 +11999,14 @@
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },
+    "003035.XSHE": {
+        "index": "003035.XSHE",
+        "display_name": "南网能源",
+        "name": "NWNY",
+        "start_date": "2021-01-19 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
     "003816.XSHE": {
         "index": "003816.XSHE",
         "display_name": "中国广核",
@@ -20321,8 +20329,8 @@
     },
     "600157.XSHG": {
         "index": "600157.XSHG",
-        "display_name": "*ST永泰",
-        "name": "*STYT",
+        "display_name": "ST永泰",
+        "name": "STYT",
         "start_date": "1998-05-13 00:00:00",
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
@@ -20985,8 +20993,8 @@
     },
     "600248.XSHG": {
         "index": "600248.XSHG",
-        "display_name": "延长化建",
-        "name": "YCHJ",
+        "display_name": "陕西建工",
+        "name": "SXJG",
         "start_date": "2000-06-22 00:00:00",
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
@@ -22833,8 +22841,8 @@
     },
     "600532.XSHG": {
         "index": "600532.XSHG",
-        "display_name": "宏达矿业",
-        "name": "HDKY",
+        "display_name": "未来股份",
+        "name": "WLGF",
         "start_date": "2002-10-31 00:00:00",
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
@@ -31871,6 +31879,14 @@
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },
+    "605005.XSHG": {
+        "index": "605005.XSHG",
+        "display_name": "合兴股份",
+        "name": "HXGF",
+        "start_date": "2021-01-19 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
     "605006.XSHG": {
         "index": "605006.XSHG",
         "display_name": "山东玻纤",
@@ -33319,6 +33335,14 @@
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },
+    "688317.XSHG": {
+        "index": "688317.XSHG",
+        "display_name": "之江生物",
+        "name": "ZJSW",
+        "start_date": "2021-01-18 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
     "688318.XSHG": {
         "index": "688318.XSHG",
         "display_name": "财富趋势",
@@ -34012,6 +34036,14 @@
         "display_name": "科思科技",
         "name": "KSKJ",
         "start_date": "2020-10-22 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
+    "688819.XSHG": {
+        "index": "688819.XSHG",
+        "display_name": "天能股份",
+        "name": "TNGF",
+        "start_date": "2021-01-18 00:00:00",
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },

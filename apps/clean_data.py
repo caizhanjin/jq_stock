@@ -145,10 +145,10 @@ def update_daily_data(start_date, end_date=None):
 
 def main():
     # 更新股票详情到数据库
-    # update_stock_info_to_database()
+    update_stock_info_to_database()
 
     # daily统计数据更新
-    update_daily_data(start_date="2020-11-01")
+    # update_daily_data(start_date="2020-11-01")
 
 
 if __name__ == '__main__':

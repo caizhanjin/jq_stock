@@ -29,12 +29,9 @@ def save_sw_three():
     print("申万三级数据更新完毕")
 
 
-def save_stocks_info():
+def save_stocks_info(stocks=None):
     """保存股票详情数据"""
-    old_stocks = load_json("../data/stocks_info.json")
-    old_stocks_count = list(old_stocks.keys())
-
-    stocks = get_all_securities(['stock'])
+    stocks = stocks if stocks else get_all_securities(['stock'])
     stocks_dict = {}
     for index, row in stocks.iterrows():
         stocks_dict[index] = {
@@ -199,7 +196,7 @@ def main():
     # 同步指定股票最新数据
     # save_history_data(stock="000012.XSHE")
     # 批量更新股票历史数据(所有)
-    # save_history_data2(start_date="2020-12-01", end_date=None)
+    save_history_data2(start_date="2020-12-01", end_date=None)
     # save_history_data2(start_date="2020-11-15", end_date="2020-12-01")
 
     # 更新指数股票列表

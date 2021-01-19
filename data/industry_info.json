@@ -3587,6 +3587,24 @@
             "industry_name": "信息技术指数"
         }
     },
+    "003035.XSHE": {
+        "zjw": {
+            "industry_code": "M75",
+            "industry_name": "科技推广和应用服务业"
+        },
+        "sw_l1": {
+            "industry_code": "801160",
+            "industry_name": "公用事业I"
+        },
+        "sw_l2": {
+            "industry_code": "801162",
+            "industry_name": "环保工程及服务II"
+        },
+        "sw_l3": {
+            "industry_code": "851641",
+            "industry_name": "环保工程及服务III"
+        }
+    },
     "002352.XSHE": {
         "sw_l1": {
             "industry_code": "801170",
@@ -8579,8 +8597,8 @@
     },
     "688127.XSHG": {
         "zjw": {
-            "industry_code": "C41",
-            "industry_name": "其他制造业"
+            "industry_code": "C40",
+            "industry_name": "仪器仪表制造业"
         },
         "sw_l1": {
             "industry_code": "801080",
@@ -14075,8 +14093,8 @@
     },
     "300873.XSHE": {
         "zjw": {
-            "industry_code": "G58",
-            "industry_name": "装卸搬运和运输代理业"
+            "industry_code": "G59",
+            "industry_name": "仓储业"
         },
         "sw_l1": {
             "industry_code": "801170",
@@ -21377,8 +21395,8 @@
             "industry_name": "LEDIII"
         },
         "zjw": {
-            "industry_code": "C38",
-            "industry_name": "电气机械和器材制造业"
+            "industry_code": "F51",
+            "industry_name": "批发业"
         },
         "jq_l2": {
             "industry_code": "HY449",
@@ -25900,8 +25918,8 @@
             "industry_name": "其他化学制品III"
         },
         "zjw": {
-            "industry_code": "C26",
-            "industry_name": "化学原料和化学制品制造业"
+            "industry_code": "C39",
+            "industry_name": "计算机、通信和其他电子设备制造业"
         },
         "jq_l2": {
             "industry_code": "HY405",
@@ -29058,8 +29076,8 @@
             "industry_name": "印染III"
         },
         "zjw": {
-            "industry_code": "C17",
-            "industry_name": "纺织业"
+            "industry_code": "C26",
+            "industry_name": "化学原料和化学制品制造业"
         },
         "jq_l2": {
             "industry_code": "HY455",
@@ -29110,8 +29128,8 @@
             "industry_name": "乘用车III"
         },
         "zjw": {
-            "industry_code": "C36",
-            "industry_name": "汽车制造业"
+            "industry_code": "G53",
+            "industry_name": "铁路运输业"
         },
         "jq_l2": {
             "industry_code": "HY444",
@@ -31216,8 +31234,8 @@
     },
     "688578.XSHG": {
         "zjw": {
-            "industry_code": "C26",
-            "industry_name": "化学原料和化学制品制造业"
+            "industry_code": "C27",
+            "industry_name": "医药制造业"
         },
         "sw_l1": {
             "industry_code": "801150",
@@ -34223,6 +34241,24 @@
         "sw_l3": {
             "industry_code": "851781",
             "industry_name": "物流III"
+        }
+    },
+    "605005.XSHG": {
+        "zjw": {
+            "industry_code": "C36",
+            "industry_name": "汽车制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801880",
+            "industry_name": "汽车I"
+        },
+        "sw_l2": {
+            "industry_code": "801093",
+            "industry_name": "汽车零部件II"
+        },
+        "sw_l3": {
+            "industry_code": "850921",
+            "industry_name": "汽车零部件III"
         }
     },
     "688179.XSHG": {
@@ -41123,8 +41159,8 @@
             "industry_name": "IT服务III"
         },
         "zjw": {
-            "industry_code": "C38",
-            "industry_name": "电气机械和器材制造业"
+            "industry_code": "I65",
+            "industry_name": "软件和信息技术服务业"
         },
         "jq_l2": {
             "industry_code": "HY423",
@@ -63936,8 +63972,8 @@
             "industry_name": "家具III"
         },
         "zjw": {
-            "industry_code": "C20",
-            "industry_name": "木材加工和木、竹、藤、棕、草制品业"
+            "industry_code": "C32",
+            "industry_name": "有色金属冶炼和压延加工业"
         },
         "jq_l2": {
             "industry_code": "HY418",
@@ -65618,8 +65654,8 @@
             "industry_name": "LEDIII"
         },
         "zjw": {
-            "industry_code": "C39",
-            "industry_name": "计算机、通信和其他电子设备制造业"
+            "industry_code": "C38",
+            "industry_name": "电气机械和器材制造业"
         },
         "jq_l2": {
             "industry_code": "HY524",
@@ -70698,6 +70734,24 @@
             "industry_name": "材料指数"
         }
     },
+    "688317.XSHG": {
+        "zjw": {
+            "industry_code": "C27",
+            "industry_name": "医药制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801150",
+            "industry_name": "医药生物I"
+        },
+        "sw_l2": {
+            "industry_code": "801153",
+            "industry_name": "医疗器械II"
+        },
+        "sw_l3": {
+            "industry_code": "851551",
+            "industry_name": "医疗器械III"
+        }
+    },
     "603520.XSHG": {
         "sw_l1": {
             "industry_code": "801150",
@@ -73318,8 +73372,8 @@
             "industry_name": "其它专用机械III"
         },
         "zjw": {
-            "industry_code": "C35",
-            "industry_name": "专用设备制造业"
+            "industry_code": "D45",
+            "industry_name": "燃气生产和供应业"
         },
         "jq_l2": {
             "industry_code": "HY427",
@@ -75820,6 +75874,24 @@
         "jq_l1": {
             "industry_code": "HY011",
             "industry_name": "房地产指数"
+        }
+    },
+    "688819.XSHG": {
+        "zjw": {
+            "industry_code": "C38",
+            "industry_name": "电气机械和器材制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801730",
+            "industry_name": "电气设备I"
+        },
+        "sw_l2": {
+            "industry_code": "801733",
+            "industry_name": "电源设备II"
+        },
+        "sw_l3": {
+            "industry_code": "857335",
+            "industry_name": "储能设备III"
         }
     },
     "002423.XSHE": {
@@ -85982,8 +86054,8 @@
             "industry_name": "化学工程III"
         },
         "zjw": {
-            "industry_code": "E48",
-            "industry_name": "土木工程建筑业"
+            "industry_code": "C26",
+            "industry_name": "化学原料和化学制品制造业"
         },
         "jq_l2": {
             "industry_code": "HY422",
@@ -86942,8 +87014,8 @@
             "industry_name": "综合III"
         },
         "zjw": {
-            "industry_code": "K70",
-            "industry_name": "房地产业"
+            "industry_code": "C35",
+            "industry_name": "专用设备制造业"
         },
         "jq_l2": {
             "industry_code": "HY593",
@@ -87046,8 +87118,8 @@
             "industry_name": "百货III"
         },
         "zjw": {
-            "industry_code": "F52",
-            "industry_name": "零售业"
+            "industry_code": "D44",
+            "industry_name": "电力、热力生产和供应业"
         },
         "jq_l2": {
             "industry_code": "HY467",
@@ -94308,8 +94380,8 @@
             "industry_name": "其他休闲服务III"
         },
         "zjw": {
-            "industry_code": "A03",
-            "industry_name": "畜牧业"
+            "industry_code": "C13",
+            "industry_name": "农副食品加工业"
         },
         "jq_l2": {
             "industry_code": "HY481",
@@ -97894,8 +97966,8 @@
             "industry_name": "燃气III"
         },
         "zjw": {
-            "industry_code": "C26",
-            "industry_name": "化学原料和化学制品制造业"
+            "industry_code": "D45",
+            "industry_name": "燃气生产和供应业"
         },
         "jq_l2": {
             "industry_code": "HY407",
@@ -104970,8 +105042,8 @@
             "industry_name": "火电III"
         },
         "zjw": {
-            "industry_code": "D45",
-            "industry_name": "燃气生产和供应业"
+            "industry_code": "D44",
+            "industry_name": "电力、热力生产和供应业"
         },
         "jq_l2": {
             "industry_code": "HY530",
@@ -105014,8 +105086,8 @@
             "industry_name": "贸易III"
         },
         "zjw": {
-            "industry_code": "F51",
-            "industry_name": "批发业"
+            "industry_code": "L72",
+            "industry_name": "商务服务业"
         },
         "jq_l2": {
             "industry_code": "HY428",
