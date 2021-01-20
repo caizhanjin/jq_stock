@@ -31,7 +31,7 @@ def save_sw_three():
 
 def save_stocks_info(stocks=None):
     """保存股票详情数据"""
-    stocks = stocks if stocks else get_all_securities(['stock'])
+    stocks = stocks if stocks is not None else get_all_securities(['stock'])
     stocks_dict = {}
     for index, row in stocks.iterrows():
         stocks_dict[index] = {

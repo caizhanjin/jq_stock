@@ -3597,12 +3597,12 @@
             "industry_name": "公用事业I"
         },
         "sw_l2": {
-            "industry_code": "801162",
-            "industry_name": "环保工程及服务II"
+            "industry_code": "801161",
+            "industry_name": "电力II"
         },
         "sw_l3": {
-            "industry_code": "851641",
-            "industry_name": "环保工程及服务III"
+            "industry_code": "851615",
+            "industry_name": "新能源发电III"
         }
     },
     "002352.XSHE": {
@@ -25528,6 +25528,24 @@
         "jq_l1": {
             "industry_code": "HY008",
             "industry_name": "信息技术指数"
+        }
+    },
+    "300935.XSHE": {
+        "zjw": {
+            "industry_code": "I65",
+            "industry_name": "软件和信息技术服务业"
+        },
+        "sw_l1": {
+            "industry_code": "801750",
+            "industry_name": "计算机I"
+        },
+        "sw_l2": {
+            "industry_code": "801222",
+            "industry_name": "计算机应用II"
+        },
+        "sw_l3": {
+            "industry_code": "852225",
+            "industry_name": "软件开发III"
         }
     },
     "300511.XSHE": {
@@ -83688,6 +83706,24 @@
             "industry_name": "工业指数"
         }
     },
+    "605228.XSHG": {
+        "zjw": {
+            "industry_code": "C36",
+            "industry_name": "汽车制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801880",
+            "industry_name": "汽车I"
+        },
+        "sw_l2": {
+            "industry_code": "801093",
+            "industry_name": "汽车零部件II"
+        },
+        "sw_l3": {
+            "industry_code": "850921",
+            "industry_name": "汽车零部件III"
+        }
+    },
     "603353.XSHG": {
         "sw_l1": {
             "industry_code": "801030",
@@ -97498,6 +97534,24 @@
         "jq_l1": {
             "industry_code": "HY006",
             "industry_name": "医疗保健指数"
+        }
+    },
+    "300929.XSHE": {
+        "zjw": {
+            "industry_code": "N77",
+            "industry_name": "生态保护和环境治理业"
+        },
+        "sw_l1": {
+            "industry_code": "801160",
+            "industry_name": "公用事业I"
+        },
+        "sw_l2": {
+            "industry_code": "801162",
+            "industry_name": "环保工程及服务II"
+        },
+        "sw_l3": {
+            "industry_code": "851641",
+            "industry_name": "环保工程及服务III"
         }
     },
     "002433.XSHE": {

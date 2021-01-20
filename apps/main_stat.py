@@ -59,6 +59,7 @@ def main(_start_date, _end_date=None):
     miss_days = [i for i in trade_days if i not in had_days]
     if len(miss_days) > 0:
         print(f"统计范围有缺失日期，开始同步缺失数据...")
+        print(f"缺失日期：{str(miss_days)}")
         save_history_data2(miss_days[0], miss_days[-1])
 
     bar_list = (
@@ -437,8 +438,8 @@ def main(_start_date, _end_date=None):
 
 if __name__ == '__main__':
     """统计汇总，只需跑一次该脚本即可"""
-    start_date = "2020-12-01"
-    end_date = "2020-12-30"
+    start_date = "2021-01-01"
+    end_date = "2021-01-19"
     main(start_date, end_date)
 
     pass

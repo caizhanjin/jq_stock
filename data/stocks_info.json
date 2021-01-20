@@ -19231,6 +19231,22 @@
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },
+    "300929.XSHE": {
+        "index": "300929.XSHE",
+        "display_name": "华骐环保",
+        "name": "HQHB",
+        "start_date": "2021-01-20 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
+    "300935.XSHE": {
+        "index": "300935.XSHE",
+        "display_name": "盈建科",
+        "name": "YJK",
+        "start_date": "2021-01-20 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
     "300999.XSHE": {
         "index": "300999.XSHE",
         "display_name": "金龙鱼",
@@ -32164,6 +32180,14 @@
         "display_name": "起帆电缆",
         "name": "QFDL",
         "start_date": "2020-07-31 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
+    "605228.XSHG": {
+        "index": "605228.XSHG",
+        "display_name": "神通科技",
+        "name": "STKJ",
+        "start_date": "2021-01-20 00:00:00",
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },
