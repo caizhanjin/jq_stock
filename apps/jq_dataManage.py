@@ -10,7 +10,7 @@ from apps.orm_sqlite import JqBarData, chunked, db, JqStockInfo
 from jqdatasdk import *
 
 # 登录聚宽账号
-auth("18813937194", "bubiou123@J")
+auth("", "")
 
 
 def save_sw_three():
