@@ -147,8 +147,15 @@ def main(_start_date, _end_date=None):
             "大于20亿持平数": df_20[(df_20['change_percent'] == 0)].shape[0],
         })
 
+    order = [
+        "code", "display_name", "change_percent", "money", "datetime",
+        "open", "close", "low", "high", "volume", "pre_close",
+        "zjw_name", "sw_l1_name", "sw_l2_name", "sw_l3_name",
+        "is_etf50", "is_if300", "is_csi500", "is_science",
+    ]
     stat_date = trade_days[-1]
     df = all_df[(all_df["datetime"] == stat_date + " 00:00:00")]
+    df = df[order]
     df = df.set_index(["code"])
     df = df.drop(['datetime'], axis=1)
     df_original = df.copy(deep=True)
@@ -236,13 +243,25 @@ def main(_start_date, _end_date=None):
             }
             # print(f"详情：{change_info_dict[key]}")
 
+    order = ["stat_type", "count", "up", "down", "stay"]
     df_change = pd.DataFrame.from_dict(list(change_overall_dict.values()), orient="columns")
+    df_change = df_change[order]
     df_change.set_index(["stat_type"], inplace=True)
     df_change.to_excel(excel_writer, stat_date)
     df_set_column_width(excel_writer, stat_date, df_change)
 
     # daily_data数据查询和导出
+    order = [
+        "datetime",
+        "science_money", "etf50_money", "if300_money", "csi500_money",
+        "front10_money", "front15_money", "front20_money",
+        "大于1亿数", "大于2亿数", "大于20亿数",
+        "大于1亿上涨数", "大于1亿下跌数", "大于1亿持平数",
+        "大于2亿上涨数", "大于2亿下跌数", "大于2亿持平数",
+        "大于20亿上涨数", "大于20亿下跌数", "大于20亿持平数",
+    ]
     df_daily = pd.DataFrame.from_dict(volume_stat_list, orient="columns")
+    df_daily = df_daily[order]
     df_daily.set_index(["datetime"], inplace=True)
     df_daily.to_excel(excel_writer, "daily_data")
 
@@ -439,7 +458,7 @@ def main(_start_date, _end_date=None):
 if __name__ == '__main__':
     """统计汇总，只需跑一次该脚本即可"""
     start_date = "2021-01-01"
-    end_date = "2021-01-19"
+    end_date = "2021-01-10"
     main(start_date, end_date)
 
     pass
