@@ -64262,30 +64262,22 @@
             "industry_name": "工业指数"
         }
     },
-    "601018.XSHG": {
+    "300931.XSHE": {
+        "zjw": {
+            "industry_code": "C34",
+            "industry_name": "通用设备制造业"
+        },
         "sw_l1": {
-            "industry_code": "801170",
-            "industry_name": "交通运输I"
+            "industry_code": "801890",
+            "industry_name": "机械设备I"
         },
         "sw_l2": {
-            "industry_code": "801171",
-            "industry_name": "港口II"
+            "industry_code": "801074",
+            "industry_name": "专用设备II"
         },
         "sw_l3": {
-            "industry_code": "851711",
-            "industry_name": "港口III"
-        },
-        "zjw": {
-            "industry_code": "G55",
-            "industry_name": "水上运输业"
-        },
-        "jq_l2": {
-            "industry_code": "HY441",
-            "industry_name": "海港与服务指数"
-        },
-        "jq_l1": {
-            "industry_code": "HY003",
-            "industry_name": "工业指数"
+            "industry_code": "850728",
+            "industry_name": "楼宇设备III"
         }
     },
     "300488.XSHE": {
@@ -77130,6 +77122,32 @@
         "jq_l1": {
             "industry_code": "HY006",
             "industry_name": "医疗保健指数"
+        }
+    },
+    "601018.XSHG": {
+        "sw_l1": {
+            "industry_code": "801170",
+            "industry_name": "交通运输I"
+        },
+        "sw_l2": {
+            "industry_code": "801171",
+            "industry_name": "港口II"
+        },
+        "sw_l3": {
+            "industry_code": "851711",
+            "industry_name": "港口III"
+        },
+        "zjw": {
+            "industry_code": "G55",
+            "industry_name": "水上运输业"
+        },
+        "jq_l2": {
+            "industry_code": "HY441",
+            "industry_name": "海港与服务指数"
+        },
+        "jq_l1": {
+            "industry_code": "HY003",
+            "industry_name": "工业指数"
         }
     },
     "300131.XSHE": {
@@ -95280,6 +95298,24 @@
             "industry_name": "房地产指数"
         }
     },
+    "605398.XSHG": {
+        "zjw": {
+            "industry_code": "I65",
+            "industry_name": "软件和信息技术服务业"
+        },
+        "sw_l1": {
+            "industry_code": "801750",
+            "industry_name": "计算机I"
+        },
+        "sw_l2": {
+            "industry_code": "801222",
+            "industry_name": "计算机应用II"
+        },
+        "sw_l3": {
+            "industry_code": "852226",
+            "industry_name": "IT服务III"
+        }
+    },
     "688081.XSHG": {
         "sw_l1": {
             "industry_code": "801740",
@@ -104154,6 +104190,24 @@
         "jq_l1": {
             "industry_code": "HY006",
             "industry_name": "医疗保健指数"
+        }
+    },
+    "300930.XSHE": {
+        "zjw": {
+            "industry_code": "C42",
+            "industry_name": "废弃资源综合利用业"
+        },
+        "sw_l1": {
+            "industry_code": "801050",
+            "industry_name": "有色金属I"
+        },
+        "sw_l2": {
+            "industry_code": "801051",
+            "industry_name": "金属非金属新材料II"
+        },
+        "sw_l3": {
+            "industry_code": "850521",
+            "industry_name": "金属新材料III"
         }
     },
     "002841.XSHE": {

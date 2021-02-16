@@ -6625,8 +6625,8 @@
     },
     "002335.XSHE": {
         "index": "002335.XSHE",
-        "display_name": "科华恒盛",
-        "name": "KHHS",
+        "display_name": "科华数据",
+        "name": "KHSJ",
         "start_date": "2010-01-13 00:00:00",
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
@@ -19239,6 +19239,22 @@
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },
+    "300930.XSHE": {
+        "index": "300930.XSHE",
+        "display_name": "屹通新材",
+        "name": "YTXC",
+        "start_date": "2021-01-21 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
+    "300931.XSHE": {
+        "index": "300931.XSHE",
+        "display_name": "通用电梯",
+        "name": "TYDT",
+        "start_date": "2021-01-21 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
     "300935.XSHE": {
         "index": "300935.XSHE",
         "display_name": "盈建科",
@@ -19833,8 +19849,8 @@
     },
     "600086.XSHG": {
         "index": "600086.XSHG",
-        "display_name": "*ST金钰",
-        "name": "*STJY",
+        "display_name": "退市金钰",
+        "name": "TSJY",
         "start_date": "1997-06-06 00:00:00",
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
@@ -32316,6 +32332,14 @@
         "display_name": "均瑶健康",
         "name": "JYJK",
         "start_date": "2020-08-18 00:00:00",
+        "end_date": "2200-01-01 00:00:00",
+        "type": "stock"
+    },
+    "605398.XSHG": {
+        "index": "605398.XSHG",
+        "display_name": "新炬网络",
+        "name": "XJWL",
+        "start_date": "2021-01-21 00:00:00",
         "end_date": "2200-01-01 00:00:00",
         "type": "stock"
     },
