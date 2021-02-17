@@ -458,7 +458,7 @@ def main(_start_date, _end_date=None):
 if __name__ == '__main__':
     """统计汇总，只需跑一次该脚本即可"""
     start_date = "2021-01-01"
-    end_date = "2021-01-10"
+    end_date = "2021-02-01"
     main(start_date, end_date)
 
     pass

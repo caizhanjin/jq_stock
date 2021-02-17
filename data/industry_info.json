@@ -1079,6 +1079,24 @@
             "industry_name": "工业指数"
         }
     },
+    "300936.XSHE": {
+        "zjw": {
+            "industry_code": "C39",
+            "industry_name": "计算机、通信和其他电子设备制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801080",
+            "industry_name": "电子I"
+        },
+        "sw_l2": {
+            "industry_code": "801083",
+            "industry_name": "元件II"
+        },
+        "sw_l3": {
+            "industry_code": "850822",
+            "industry_name": "印制电路板III"
+        }
+    },
     "605007.XSHG": {
         "zjw": {
             "industry_code": "C22",
@@ -3839,6 +3857,24 @@
             "industry_name": "信息技术指数"
         }
     },
+    "300939.XSHE": {
+        "zjw": {
+            "industry_code": "C39",
+            "industry_name": "计算机、通信和其他电子设备制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801080",
+            "industry_name": "电子I"
+        },
+        "sw_l2": {
+            "industry_code": "801084",
+            "industry_name": "光学光电子II"
+        },
+        "sw_l3": {
+            "industry_code": "850831",
+            "industry_name": "显示器件III"
+        }
+    },
     "300251.XSHE": {
         "sw_l1": {
             "industry_code": "801760",
@@ -5445,6 +5481,32 @@
         "jq_l1": {
             "industry_code": "HY004",
             "industry_name": "可选消费指数"
+        }
+    },
+    "603697.XSHG": {
+        "sw_l1": {
+            "industry_code": "801120",
+            "industry_name": "食品饮料I"
+        },
+        "sw_l2": {
+            "industry_code": "801124",
+            "industry_name": "食品加工II"
+        },
+        "sw_l3": {
+            "industry_code": "851244",
+            "industry_name": "食品综合III"
+        },
+        "zjw": {
+            "industry_code": "C14",
+            "industry_name": "食品制造业"
+        },
+        "jq_l2": {
+            "industry_code": "HY481",
+            "industry_name": "食品加工与肉类指数"
+        },
+        "jq_l1": {
+            "industry_code": "HY005",
+            "industry_name": "日常消费指数"
         }
     },
     "300166.XSHE": {
@@ -7865,6 +7927,32 @@
             "industry_name": "工业指数"
         }
     },
+    "600844.XSHG": {
+        "sw_l1": {
+            "industry_code": "801030",
+            "industry_name": "化工I"
+        },
+        "sw_l2": {
+            "industry_code": "801034",
+            "industry_name": "化学制品II"
+        },
+        "sw_l3": {
+            "industry_code": "850339",
+            "industry_name": "其他化学制品III"
+        },
+        "zjw": {
+            "industry_code": "C26",
+            "industry_name": "化学原料和化学制品制造业"
+        },
+        "jq_l2": {
+            "industry_code": "HY405",
+            "industry_name": "基础化工指数"
+        },
+        "jq_l1": {
+            "industry_code": "HY002",
+            "industry_name": "材料指数"
+        }
+    },
     "300537.XSHE": {
         "sw_l1": {
             "industry_code": "801030",
@@ -8715,6 +8803,32 @@
         "jq_l1": {
             "industry_code": "HY006",
             "industry_name": "医疗保健指数"
+        }
+    },
+    "603863.XSHG": {
+        "sw_l1": {
+            "industry_code": "801140",
+            "industry_name": "轻工制造I"
+        },
+        "sw_l2": {
+            "industry_code": "801143",
+            "industry_name": "造纸II"
+        },
+        "sw_l3": {
+            "industry_code": "851411",
+            "industry_name": "造纸III"
+        },
+        "zjw": {
+            "industry_code": "C22",
+            "industry_name": "造纸和纸制品业"
+        },
+        "jq_l2": {
+            "industry_code": "HY419",
+            "industry_name": "纸制品指数"
+        },
+        "jq_l1": {
+            "industry_code": "HY002",
+            "industry_name": "材料指数"
         }
     },
     "601228.XSHG": {
@@ -13203,6 +13317,24 @@
             "industry_name": "材料指数"
         }
     },
+    "605081.XSHG": {
+        "zjw": {
+            "industry_code": "N77",
+            "industry_name": "生态保护和环境治理业"
+        },
+        "sw_l1": {
+            "industry_code": "801160",
+            "industry_name": "公用事业I"
+        },
+        "sw_l2": {
+            "industry_code": "801164",
+            "industry_name": "水务II"
+        },
+        "sw_l3": {
+            "industry_code": "851621",
+            "industry_name": "水务III"
+        }
+    },
     "002625.XSHE": {
         "sw_l1": {
             "industry_code": "801880",
@@ -17565,6 +17697,32 @@
             "industry_name": "医疗保健指数"
         }
     },
+    "603611.XSHG": {
+        "sw_l1": {
+            "industry_code": "801890",
+            "industry_name": "机械设备I"
+        },
+        "sw_l2": {
+            "industry_code": "801074",
+            "industry_name": "专用设备II"
+        },
+        "sw_l3": {
+            "industry_code": "850722",
+            "industry_name": "工程机械III"
+        },
+        "zjw": {
+            "industry_code": "C34",
+            "industry_name": "通用设备制造业"
+        },
+        "jq_l2": {
+            "industry_code": "HY426",
+            "industry_name": "建筑机械与重型卡车指数"
+        },
+        "jq_l1": {
+            "industry_code": "HY003",
+            "industry_name": "工业指数"
+        }
+    },
     "601238.XSHG": {
         "sw_l1": {
             "industry_code": "801880",
@@ -17615,6 +17773,24 @@
         "jq_l1": {
             "industry_code": "HY004",
             "industry_name": "可选消费指数"
+        }
+    },
+    "688059.XSHG": {
+        "zjw": {
+            "industry_code": "C33",
+            "industry_name": "金属制品业"
+        },
+        "sw_l1": {
+            "industry_code": "801890",
+            "industry_name": "机械设备I"
+        },
+        "sw_l2": {
+            "industry_code": "801075",
+            "industry_name": "金属制品II"
+        },
+        "sw_l3": {
+            "industry_code": "850751",
+            "industry_name": "金属制品III"
         }
     },
     "600528.XSHG": {
@@ -17973,30 +18149,22 @@
             "industry_name": "公用事业指数"
         }
     },
-    "600844.XSHG": {
+    "300940.XSHE": {
+        "zjw": {
+            "industry_code": "C39",
+            "industry_name": "计算机、通信和其他电子设备制造业"
+        },
         "sw_l1": {
-            "industry_code": "801030",
-            "industry_name": "化工I"
+            "industry_code": "801080",
+            "industry_name": "电子I"
         },
         "sw_l2": {
-            "industry_code": "801034",
-            "industry_name": "化学制品II"
+            "industry_code": "801084",
+            "industry_name": "光学光电子II"
         },
         "sw_l3": {
-            "industry_code": "850339",
-            "industry_name": "其他化学制品III"
-        },
-        "zjw": {
-            "industry_code": "C26",
-            "industry_name": "化学原料和化学制品制造业"
-        },
-        "jq_l2": {
-            "industry_code": "HY405",
-            "industry_name": "基础化工指数"
-        },
-        "jq_l1": {
-            "industry_code": "HY002",
-            "industry_name": "材料指数"
+            "industry_code": "850832",
+            "industry_name": "LEDIII"
         }
     },
     "002384.XSHE": {
@@ -18285,30 +18453,22 @@
             "industry_name": "工业指数"
         }
     },
-    "600594.XSHG": {
+    "300937.XSHE": {
+        "zjw": {
+            "industry_code": "F51",
+            "industry_name": "批发业"
+        },
         "sw_l1": {
             "industry_code": "801150",
             "industry_name": "医药生物I"
         },
         "sw_l2": {
-            "industry_code": "801155",
-            "industry_name": "中药II"
+            "industry_code": "801154",
+            "industry_name": "医药商业II"
         },
         "sw_l3": {
-            "industry_code": "851521",
-            "industry_name": "中药III"
-        },
-        "zjw": {
-            "industry_code": "C27",
-            "industry_name": "医药制造业"
-        },
-        "jq_l2": {
-            "industry_code": "HY572",
-            "industry_name": "中药指数"
-        },
-        "jq_l1": {
-            "industry_code": "HY006",
-            "industry_name": "医疗保健指数"
+            "industry_code": "851541",
+            "industry_name": "医药商业III"
         }
     },
     "688586.XSHG": {
@@ -24319,6 +24479,24 @@
             "industry_name": "工业指数"
         }
     },
+    "300945.XSHE": {
+        "zjw": {
+            "industry_code": "F52",
+            "industry_name": "零售业"
+        },
+        "sw_l1": {
+            "industry_code": "801140",
+            "industry_name": "轻工制造I"
+        },
+        "sw_l2": {
+            "industry_code": "801142",
+            "industry_name": "家用轻工II"
+        },
+        "sw_l3": {
+            "industry_code": "851434",
+            "industry_name": "珠宝首饰III"
+        }
+    },
     "300095.XSHE": {
         "sw_l1": {
             "industry_code": "801890",
@@ -24557,6 +24735,24 @@
         "zjw": {
             "industry_code": "E48",
             "industry_name": "土木工程建筑业"
+        }
+    },
+    "688669.XSHG": {
+        "zjw": {
+            "industry_code": "C29",
+            "industry_name": "橡胶和塑料制品业"
+        },
+        "sw_l1": {
+            "industry_code": "801030",
+            "industry_name": "化工I"
+        },
+        "sw_l2": {
+            "industry_code": "801036",
+            "industry_name": "塑料II"
+        },
+        "sw_l3": {
+            "industry_code": "850353",
+            "industry_name": "改性塑料III"
         }
     },
     "600662.XSHG": {
@@ -26400,30 +26596,22 @@
             "industry_name": "可选消费指数"
         }
     },
-    "603327.XSHG": {
+    "601963.XSHG": {
+        "zjw": {
+            "industry_code": "J66",
+            "industry_name": "货币金融服务"
+        },
         "sw_l1": {
-            "industry_code": "801080",
-            "industry_name": "电子I"
+            "industry_code": "801780",
+            "industry_name": "银行I"
         },
         "sw_l2": {
-            "industry_code": "801085",
-            "industry_name": "电子制造II"
+            "industry_code": "801192",
+            "industry_name": "银行II"
         },
         "sw_l3": {
-            "industry_code": "850852",
-            "industry_name": "电子零部件制造III"
-        },
-        "zjw": {
-            "industry_code": "C39",
-            "industry_name": "计算机、通信和其他电子设备制造业"
-        },
-        "jq_l2": {
-            "industry_code": "HY519",
-            "industry_name": "电子元件指数"
-        },
-        "jq_l1": {
-            "industry_code": "HY008",
-            "industry_name": "信息技术指数"
+            "industry_code": "851911",
+            "industry_name": "银行III"
         }
     },
     "300415.XSHE": {
@@ -29054,6 +29242,24 @@
             "industry_name": "材料指数"
         }
     },
+    "688665.XSHG": {
+        "zjw": {
+            "industry_code": "C39",
+            "industry_name": "计算机、通信和其他电子设备制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801890",
+            "industry_name": "机械设备I"
+        },
+        "sw_l2": {
+            "industry_code": "801073",
+            "industry_name": "仪器仪表II"
+        },
+        "sw_l3": {
+            "industry_code": "850731",
+            "industry_name": "仪器仪表III"
+        }
+    },
     "603822.XSHG": {
         "sw_l1": {
             "industry_code": "801030",
@@ -29252,6 +29458,24 @@
         "jq_l1": {
             "industry_code": "HY008",
             "industry_name": "信息技术指数"
+        }
+    },
+    "300933.XSHE": {
+        "zjw": {
+            "industry_code": "C38",
+            "industry_name": "电气机械和器材制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801730",
+            "industry_name": "电气设备I"
+        },
+        "sw_l2": {
+            "industry_code": "801734",
+            "industry_name": "高低压设备II"
+        },
+        "sw_l3": {
+            "industry_code": "857344",
+            "industry_name": "线缆部件及其他III"
         }
     },
     "600192.XSHG": {
@@ -31780,6 +32004,24 @@
             "industry_name": "工业指数"
         }
     },
+    "300938.XSHE": {
+        "zjw": {
+            "industry_code": "M74",
+            "industry_name": "专业技术服务业"
+        },
+        "sw_l1": {
+            "industry_code": "801230",
+            "industry_name": "综合I"
+        },
+        "sw_l2": {
+            "industry_code": "801231",
+            "industry_name": "综合II"
+        },
+        "sw_l3": {
+            "industry_code": "852311",
+            "industry_name": "综合III"
+        }
+    },
     "600597.XSHG": {
         "sw_l1": {
             "industry_code": "801120",
@@ -32012,6 +32254,24 @@
         "jq_l1": {
             "industry_code": "HY004",
             "industry_name": "可选消费指数"
+        }
+    },
+    "300932.XSHE": {
+        "zjw": {
+            "industry_code": "C38",
+            "industry_name": "电气机械和器材制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801730",
+            "industry_name": "电气设备I"
+        },
+        "sw_l2": {
+            "industry_code": "801734",
+            "industry_name": "高低压设备II"
+        },
+        "sw_l3": {
+            "industry_code": "857343",
+            "industry_name": "低压设备III"
         }
     },
     "002468.XSHE": {
@@ -32466,30 +32726,30 @@
             "industry_name": "工业指数"
         }
     },
-    "603863.XSHG": {
+    "601021.XSHG": {
         "sw_l1": {
-            "industry_code": "801140",
-            "industry_name": "轻工制造I"
+            "industry_code": "801170",
+            "industry_name": "交通运输I"
         },
         "sw_l2": {
-            "industry_code": "801143",
-            "industry_name": "造纸II"
+            "industry_code": "801173",
+            "industry_name": "航空运输II"
         },
         "sw_l3": {
-            "industry_code": "851411",
-            "industry_name": "造纸III"
+            "industry_code": "851741",
+            "industry_name": "航空运输III"
         },
         "zjw": {
-            "industry_code": "C22",
-            "industry_name": "造纸和纸制品业"
+            "industry_code": "G56",
+            "industry_name": "航空运输业"
         },
         "jq_l2": {
-            "industry_code": "HY419",
-            "industry_name": "纸制品指数"
+            "industry_code": "HY435",
+            "industry_name": "航空指数"
         },
         "jq_l1": {
-            "industry_code": "HY002",
-            "industry_name": "材料指数"
+            "industry_code": "HY003",
+            "industry_name": "工业指数"
         }
     },
     "000911.XSHE": {
@@ -33680,16 +33940,16 @@
     },
     "002970.XSHE": {
         "sw_l1": {
-            "industry_code": "801080",
-            "industry_name": "电子I"
+            "industry_code": "801750",
+            "industry_name": "计算机I"
         },
         "sw_l2": {
-            "industry_code": "801085",
-            "industry_name": "电子制造II"
+            "industry_code": "801101",
+            "industry_name": "计算机设备II"
         },
         "sw_l3": {
-            "industry_code": "850851",
-            "industry_name": "电子系统组装III"
+            "industry_code": "851021",
+            "industry_name": "计算机设备III"
         },
         "zjw": {
             "industry_code": "C39",
@@ -37351,6 +37611,24 @@
             "industry_name": "信息技术指数"
         }
     },
+    "300943.XSHE": {
+        "zjw": {
+            "industry_code": "C34",
+            "industry_name": "通用设备制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801890",
+            "industry_name": "机械设备I"
+        },
+        "sw_l2": {
+            "industry_code": "801072",
+            "industry_name": "通用机械II"
+        },
+        "sw_l3": {
+            "industry_code": "850712",
+            "industry_name": "机械基础件III"
+        }
+    },
     "002514.XSHE": {
         "sw_l1": {
             "industry_code": "801890",
@@ -38731,30 +39009,22 @@
             "industry_name": "信息技术指数"
         }
     },
-    "603611.XSHG": {
+    "300941.XSHE": {
+        "zjw": {
+            "industry_code": "I65",
+            "industry_name": "软件和信息技术服务业"
+        },
         "sw_l1": {
-            "industry_code": "801890",
-            "industry_name": "机械设备I"
+            "industry_code": "801750",
+            "industry_name": "计算机I"
         },
         "sw_l2": {
-            "industry_code": "801074",
-            "industry_name": "专用设备II"
+            "industry_code": "801222",
+            "industry_name": "计算机应用II"
         },
         "sw_l3": {
-            "industry_code": "850722",
-            "industry_name": "工程机械III"
-        },
-        "zjw": {
-            "industry_code": "C34",
-            "industry_name": "通用设备制造业"
-        },
-        "jq_l2": {
-            "industry_code": "HY426",
-            "industry_name": "建筑机械与重型卡车指数"
-        },
-        "jq_l1": {
-            "industry_code": "HY003",
-            "industry_name": "工业指数"
+            "industry_code": "852226",
+            "industry_name": "IT服务III"
         }
     },
     "300695.XSHE": {
@@ -43783,30 +44053,10 @@
             "industry_name": "信息技术指数"
         }
     },
-    "603379.XSHG": {
-        "sw_l1": {
-            "industry_code": "801030",
-            "industry_name": "化工I"
-        },
-        "sw_l2": {
-            "industry_code": "801034",
-            "industry_name": "化学制品II"
-        },
-        "sw_l3": {
-            "industry_code": "850382",
-            "industry_name": "氟化工及制冷剂III"
-        },
+    "600762.XSHG": {
         "zjw": {
-            "industry_code": "C26",
-            "industry_name": "化学原料和化学制品制造业"
-        },
-        "jq_l2": {
-            "industry_code": "HY405",
-            "industry_name": "基础化工指数"
-        },
-        "jq_l1": {
-            "industry_code": "HY002",
-            "industry_name": "材料指数"
+            "industry_code": "A01",
+            "industry_name": "农业"
         }
     },
     "600875.XSHG": {
@@ -44241,6 +44491,24 @@
         "jq_l1": {
             "industry_code": "HY003",
             "industry_name": "工业指数"
+        }
+    },
+    "300942.XSHE": {
+        "zjw": {
+            "industry_code": "C27",
+            "industry_name": "医药制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801150",
+            "industry_name": "医药生物I"
+        },
+        "sw_l2": {
+            "industry_code": "801152",
+            "industry_name": "生物制品II"
+        },
+        "sw_l3": {
+            "industry_code": "851531",
+            "industry_name": "生物制品III"
         }
     },
     "300550.XSHE": {
@@ -44765,10 +45033,22 @@
             "industry_name": "工业指数"
         }
     },
-    "600762.XSHG": {
+    "300947.XSHE": {
         "zjw": {
-            "industry_code": "A01",
-            "industry_name": "农业"
+            "industry_code": "L72",
+            "industry_name": "商务服务业"
+        },
+        "sw_l1": {
+            "industry_code": "801200",
+            "industry_name": "商业贸易I"
+        },
+        "sw_l2": {
+            "industry_code": "801205",
+            "industry_name": "商业物业经营II"
+        },
+        "sw_l3": {
+            "industry_code": "852051",
+            "industry_name": "一般物业经营III"
         }
     },
     "600715.XSHG": {
@@ -46339,6 +46619,32 @@
         "jq_l1": {
             "industry_code": "HY002",
             "industry_name": "材料指数"
+        }
+    },
+    "603327.XSHG": {
+        "sw_l1": {
+            "industry_code": "801080",
+            "industry_name": "电子I"
+        },
+        "sw_l2": {
+            "industry_code": "801085",
+            "industry_name": "电子制造II"
+        },
+        "sw_l3": {
+            "industry_code": "850852",
+            "industry_name": "电子零部件制造III"
+        },
+        "zjw": {
+            "industry_code": "C39",
+            "industry_name": "计算机、通信和其他电子设备制造业"
+        },
+        "jq_l2": {
+            "industry_code": "HY519",
+            "industry_name": "电子元件指数"
+        },
+        "jq_l1": {
+            "industry_code": "HY008",
+            "industry_name": "信息技术指数"
         }
     },
     "300919.XSHE": {
@@ -48039,6 +48345,24 @@
             "industry_name": "能源指数"
         }
     },
+    "605055.XSHG": {
+        "zjw": {
+            "industry_code": "C17",
+            "industry_name": "纺织业"
+        },
+        "sw_l1": {
+            "industry_code": "801130",
+            "industry_name": "纺织服装I"
+        },
+        "sw_l2": {
+            "industry_code": "801131",
+            "industry_name": "纺织制造II"
+        },
+        "sw_l3": {
+            "industry_code": "851314",
+            "industry_name": "印染III"
+        }
+    },
     "002703.XSHE": {
         "sw_l1": {
             "industry_code": "801880",
@@ -49339,6 +49663,12 @@
             "industry_name": "医疗保健指数"
         }
     },
+    "600591.XSHG": {
+        "zjw": {
+            "industry_code": "G56",
+            "industry_name": "航空运输业"
+        }
+    },
     "603586.XSHG": {
         "sw_l1": {
             "industry_code": "801880",
@@ -50433,6 +50763,32 @@
             "industry_name": "日常消费指数"
         }
     },
+    "603379.XSHG": {
+        "sw_l1": {
+            "industry_code": "801030",
+            "industry_name": "化工I"
+        },
+        "sw_l2": {
+            "industry_code": "801034",
+            "industry_name": "化学制品II"
+        },
+        "sw_l3": {
+            "industry_code": "850382",
+            "industry_name": "氟化工及制冷剂III"
+        },
+        "zjw": {
+            "industry_code": "C26",
+            "industry_name": "化学原料和化学制品制造业"
+        },
+        "jq_l2": {
+            "industry_code": "HY405",
+            "industry_name": "基础化工指数"
+        },
+        "jq_l1": {
+            "industry_code": "HY002",
+            "industry_name": "材料指数"
+        }
+    },
     "000153.XSHE": {
         "sw_l1": {
             "industry_code": "801150",
@@ -50904,6 +51260,24 @@
             "industry_name": "材料指数"
         }
     },
+    "688070.XSHG": {
+        "zjw": {
+            "industry_code": "C37",
+            "industry_name": "铁路、船舶、航空航天和其他运输设备制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801740",
+            "industry_name": "国防军工I"
+        },
+        "sw_l2": {
+            "industry_code": "801742",
+            "industry_name": "航空装备II"
+        },
+        "sw_l3": {
+            "industry_code": "857421",
+            "industry_name": "航空装备III"
+        }
+    },
     "000950.XSHE": {
         "sw_l1": {
             "industry_code": "801150",
@@ -51146,6 +51520,24 @@
         "jq_l1": {
             "industry_code": "HY003",
             "industry_name": "工业指数"
+        }
+    },
+    "688687.XSHG": {
+        "zjw": {
+            "industry_code": "C27",
+            "industry_name": "医药制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801150",
+            "industry_name": "医药生物I"
+        },
+        "sw_l2": {
+            "industry_code": "801152",
+            "industry_name": "生物制品II"
+        },
+        "sw_l3": {
+            "industry_code": "851531",
+            "industry_name": "生物制品III"
         }
     },
     "002394.XSHE": {
@@ -51636,16 +52028,16 @@
     },
     "002850.XSHE": {
         "sw_l1": {
-            "industry_code": "801080",
-            "industry_name": "电子I"
+            "industry_code": "801730",
+            "industry_name": "电气设备I"
         },
         "sw_l2": {
-            "industry_code": "801085",
-            "industry_name": "电子制造II"
+            "industry_code": "801733",
+            "industry_name": "电源设备II"
         },
         "sw_l3": {
-            "industry_code": "850852",
-            "industry_name": "电子零部件制造III"
+            "industry_code": "857335",
+            "industry_name": "储能设备III"
         },
         "zjw": {
             "industry_code": "C33",
@@ -51660,30 +52052,22 @@
             "industry_name": "工业指数"
         }
     },
-    "603697.XSHG": {
+    "300946.XSHE": {
+        "zjw": {
+            "industry_code": "C33",
+            "industry_name": "金属制品业"
+        },
         "sw_l1": {
-            "industry_code": "801120",
-            "industry_name": "食品饮料I"
+            "industry_code": "801890",
+            "industry_name": "机械设备I"
         },
         "sw_l2": {
-            "industry_code": "801124",
-            "industry_name": "食品加工II"
+            "industry_code": "801075",
+            "industry_name": "金属制品II"
         },
         "sw_l3": {
-            "industry_code": "851244",
-            "industry_name": "食品综合III"
-        },
-        "zjw": {
-            "industry_code": "C14",
-            "industry_name": "食品制造业"
-        },
-        "jq_l2": {
-            "industry_code": "HY481",
-            "industry_name": "食品加工与肉类指数"
-        },
-        "jq_l1": {
-            "industry_code": "HY005",
-            "industry_name": "日常消费指数"
+            "industry_code": "850751",
+            "industry_name": "金属制品III"
         }
     },
     "300569.XSHE": {
@@ -59116,30 +59500,22 @@
             "industry_name": "材料指数"
         }
     },
-    "601021.XSHG": {
+    "600916.XSHG": {
+        "zjw": {
+            "industry_code": "F52",
+            "industry_name": "零售业"
+        },
         "sw_l1": {
-            "industry_code": "801170",
-            "industry_name": "交通运输I"
+            "industry_code": "801140",
+            "industry_name": "轻工制造I"
         },
         "sw_l2": {
-            "industry_code": "801173",
-            "industry_name": "航空运输II"
+            "industry_code": "801142",
+            "industry_name": "家用轻工II"
         },
         "sw_l3": {
-            "industry_code": "851741",
-            "industry_name": "航空运输III"
-        },
-        "zjw": {
-            "industry_code": "G56",
-            "industry_name": "航空运输业"
-        },
-        "jq_l2": {
-            "industry_code": "HY435",
-            "industry_name": "航空指数"
-        },
-        "jq_l1": {
-            "industry_code": "HY003",
-            "industry_name": "工业指数"
+            "industry_code": "851434",
+            "industry_name": "珠宝首饰III"
         }
     },
     "002238.XSHE": {
@@ -61516,10 +61892,22 @@
             "industry_name": "工业指数"
         }
     },
-    "600591.XSHG": {
+    "003037.XSHE": {
         "zjw": {
-            "industry_code": "G56",
-            "industry_name": "航空运输业"
+            "industry_code": "C30",
+            "industry_name": "非金属矿物制品业"
+        },
+        "sw_l1": {
+            "industry_code": "801710",
+            "industry_name": "建筑材料I"
+        },
+        "sw_l2": {
+            "industry_code": "801713",
+            "industry_name": "其他建材II"
+        },
+        "sw_l3": {
+            "industry_code": "850616",
+            "industry_name": "管材III"
         }
     },
     "688566.XSHG": {
@@ -63068,16 +63456,16 @@
     },
     "603267.XSHG": {
         "sw_l1": {
-            "industry_code": "801080",
-            "industry_name": "电子I"
+            "industry_code": "801740",
+            "industry_name": "国防军工I"
         },
         "sw_l2": {
-            "industry_code": "801083",
-            "industry_name": "元件II"
+            "industry_code": "801741",
+            "industry_name": "航天装备II"
         },
         "sw_l3": {
-            "industry_code": "850823",
-            "industry_name": "被动元件III"
+            "industry_code": "857411",
+            "industry_name": "航天装备III"
         },
         "zjw": {
             "industry_code": "C39",
@@ -67726,16 +68114,16 @@
     },
     "603678.XSHG": {
         "sw_l1": {
-            "industry_code": "801080",
-            "industry_name": "电子I"
+            "industry_code": "801740",
+            "industry_name": "国防军工I"
         },
         "sw_l2": {
-            "industry_code": "801083",
-            "industry_name": "元件II"
+            "industry_code": "801741",
+            "industry_name": "航天装备II"
         },
         "sw_l3": {
-            "industry_code": "850823",
-            "industry_name": "被动元件III"
+            "industry_code": "857411",
+            "industry_name": "航天装备III"
         },
         "zjw": {
             "industry_code": "C39",
@@ -68061,29 +68449,9 @@
         }
     },
     "600317.XSHG": {
-        "sw_l1": {
-            "industry_code": "801170",
-            "industry_name": "交通运输I"
-        },
-        "sw_l2": {
-            "industry_code": "801171",
-            "industry_name": "港口II"
-        },
-        "sw_l3": {
-            "industry_code": "851711",
-            "industry_name": "港口III"
-        },
         "zjw": {
             "industry_code": "G55",
             "industry_name": "水上运输业"
-        },
-        "jq_l2": {
-            "industry_code": "HY441",
-            "industry_name": "海港与服务指数"
-        },
-        "jq_l1": {
-            "industry_code": "HY003",
-            "industry_name": "工业指数"
         }
     },
     "600363.XSHG": {
@@ -70718,6 +71086,24 @@
             "industry_name": "农副食品加工业"
         }
     },
+    "605368.XSHG": {
+        "zjw": {
+            "industry_code": "D45",
+            "industry_name": "燃气生产和供应业"
+        },
+        "sw_l1": {
+            "industry_code": "801160",
+            "industry_name": "公用事业I"
+        },
+        "sw_l2": {
+            "industry_code": "801163",
+            "industry_name": "燃气II"
+        },
+        "sw_l3": {
+            "industry_code": "851631",
+            "industry_name": "燃气III"
+        }
+    },
     "002155.XSHE": {
         "sw_l1": {
             "industry_code": "801050",
@@ -70760,6 +71146,24 @@
         "sw_l3": {
             "industry_code": "851551",
             "industry_name": "医疗器械III"
+        }
+    },
+    "003038.XSHE": {
+        "zjw": {
+            "industry_code": "C32",
+            "industry_name": "有色金属冶炼和压延加工业"
+        },
+        "sw_l1": {
+            "industry_code": "801050",
+            "industry_name": "有色金属I"
+        },
+        "sw_l2": {
+            "industry_code": "801055",
+            "industry_name": "工业金属II"
+        },
+        "sw_l3": {
+            "industry_code": "850551",
+            "industry_name": "铝III"
         }
     },
     "603520.XSHG": {
@@ -73258,30 +73662,22 @@
             "industry_name": "包装印刷III"
         }
     },
-    "600584.XSHG": {
+    "003036.XSHE": {
+        "zjw": {
+            "industry_code": "C35",
+            "industry_name": "专用设备制造业"
+        },
         "sw_l1": {
-            "industry_code": "801080",
-            "industry_name": "电子I"
+            "industry_code": "801890",
+            "industry_name": "机械设备I"
         },
         "sw_l2": {
-            "industry_code": "801081",
-            "industry_name": "半导体II"
+            "industry_code": "801074",
+            "industry_name": "专用设备II"
         },
         "sw_l3": {
-            "industry_code": "850811",
-            "industry_name": "集成电路III"
-        },
-        "zjw": {
-            "industry_code": "C39",
-            "industry_name": "计算机、通信和其他电子设备制造业"
-        },
-        "jq_l2": {
-            "industry_code": "HY524",
-            "industry_name": "半导体产品指数"
-        },
-        "jq_l1": {
-            "industry_code": "HY008",
-            "industry_name": "信息技术指数"
+            "industry_code": "850721",
+            "industry_name": "纺织服装设备III"
         }
     },
     "002033.XSHE": {
@@ -76308,6 +76704,24 @@
             "industry_name": "工业指数"
         }
     },
+    "688607.XSHG": {
+        "zjw": {
+            "industry_code": "C35",
+            "industry_name": "专用设备制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801150",
+            "industry_name": "医药生物I"
+        },
+        "sw_l2": {
+            "industry_code": "801153",
+            "industry_name": "医疗器械II"
+        },
+        "sw_l3": {
+            "industry_code": "851551",
+            "industry_name": "医疗器械III"
+        }
+    },
     "688338.XSHG": {
         "zjw": {
             "industry_code": "C27",
@@ -76714,6 +77128,24 @@
         "jq_l1": {
             "industry_code": "HY008",
             "industry_name": "信息技术指数"
+        }
+    },
+    "688350.XSHG": {
+        "zjw": {
+            "industry_code": "N77",
+            "industry_name": "生态保护和环境治理业"
+        },
+        "sw_l1": {
+            "industry_code": "801030",
+            "industry_name": "化工I"
+        },
+        "sw_l2": {
+            "industry_code": "801034",
+            "industry_name": "化学制品II"
+        },
+        "sw_l3": {
+            "industry_code": "850339",
+            "industry_name": "其他化学制品III"
         }
     },
     "603596.XSHG": {
@@ -77330,6 +77762,24 @@
         "jq_l1": {
             "industry_code": "HY003",
             "industry_name": "工业指数"
+        }
+    },
+    "688689.XSHG": {
+        "zjw": {
+            "industry_code": "C39",
+            "industry_name": "计算机、通信和其他电子设备制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801080",
+            "industry_name": "电子I"
+        },
+        "sw_l2": {
+            "industry_code": "801081",
+            "industry_name": "半导体II"
+        },
+        "sw_l3": {
+            "industry_code": "850812",
+            "industry_name": "分立器件III"
         }
     },
     "300636.XSHE": {
@@ -89250,6 +89700,32 @@
             "industry_name": "信息技术指数"
         }
     },
+    "600584.XSHG": {
+        "sw_l1": {
+            "industry_code": "801080",
+            "industry_name": "电子I"
+        },
+        "sw_l2": {
+            "industry_code": "801081",
+            "industry_name": "半导体II"
+        },
+        "sw_l3": {
+            "industry_code": "850811",
+            "industry_name": "集成电路III"
+        },
+        "zjw": {
+            "industry_code": "C39",
+            "industry_name": "计算机、通信和其他电子设备制造业"
+        },
+        "jq_l2": {
+            "industry_code": "HY524",
+            "industry_name": "半导体产品指数"
+        },
+        "jq_l1": {
+            "industry_code": "HY008",
+            "industry_name": "信息技术指数"
+        }
+    },
     "300207.XSHE": {
         "sw_l1": {
             "industry_code": "801080",
@@ -91342,6 +91818,24 @@
         "jq_l1": {
             "industry_code": "HY008",
             "industry_name": "信息技术指数"
+        }
+    },
+    "688680.XSHG": {
+        "zjw": {
+            "industry_code": "C29",
+            "industry_name": "橡胶和塑料制品业"
+        },
+        "sw_l1": {
+            "industry_code": "801730",
+            "industry_name": "电气设备I"
+        },
+        "sw_l2": {
+            "industry_code": "801733",
+            "industry_name": "电源设备II"
+        },
+        "sw_l3": {
+            "industry_code": "857333",
+            "industry_name": "光伏设备III"
         }
     },
     "002614.XSHE": {
@@ -97106,6 +97600,24 @@
             "industry_name": "工业指数"
         }
     },
+    "688628.XSHG": {
+        "zjw": {
+            "industry_code": "C40",
+            "industry_name": "仪器仪表制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801890",
+            "industry_name": "机械设备I"
+        },
+        "sw_l2": {
+            "industry_code": "801073",
+            "industry_name": "仪器仪表II"
+        },
+        "sw_l3": {
+            "industry_code": "850731",
+            "industry_name": "仪器仪表III"
+        }
+    },
     "000665.XSHE": {
         "sw_l1": {
             "industry_code": "801760",
@@ -97582,12 +98094,12 @@
             "industry_name": "公用事业I"
         },
         "sw_l2": {
-            "industry_code": "801162",
-            "industry_name": "环保工程及服务II"
+            "industry_code": "801164",
+            "industry_name": "水务II"
         },
         "sw_l3": {
-            "industry_code": "851641",
-            "industry_name": "环保工程及服务III"
+            "industry_code": "851621",
+            "industry_name": "水务III"
         }
     },
     "002433.XSHE": {
@@ -98144,6 +98656,32 @@
         "jq_l1": {
             "industry_code": "HY011",
             "industry_name": "房地产指数"
+        }
+    },
+    "600594.XSHG": {
+        "sw_l1": {
+            "industry_code": "801150",
+            "industry_name": "医药生物I"
+        },
+        "sw_l2": {
+            "industry_code": "801155",
+            "industry_name": "中药II"
+        },
+        "sw_l3": {
+            "industry_code": "851521",
+            "industry_name": "中药III"
+        },
+        "zjw": {
+            "industry_code": "C27",
+            "industry_name": "医药制造业"
+        },
+        "jq_l2": {
+            "industry_code": "HY572",
+            "industry_name": "中药指数"
+        },
+        "jq_l1": {
+            "industry_code": "HY006",
+            "industry_name": "医疗保健指数"
         }
     },
     "002143.XSHE": {
@@ -99926,6 +100464,24 @@
         "jq_l1": {
             "industry_code": "HY003",
             "industry_name": "工业指数"
+        }
+    },
+    "605337.XSHG": {
+        "zjw": {
+            "industry_code": "C15",
+            "industry_name": "酒、饮料和精制茶制造业"
+        },
+        "sw_l1": {
+            "industry_code": "801120",
+            "industry_name": "食品饮料I"
+        },
+        "sw_l2": {
+            "industry_code": "801123",
+            "industry_name": "饮料制造II"
+        },
+        "sw_l3": {
+            "industry_code": "851234",
+            "industry_name": "软饮料III"
         }
     },
     "300490.XSHE": {
@@ -101874,6 +102430,24 @@
         "jq_l1": {
             "industry_code": "HY010",
             "industry_name": "公用事业指数"
+        }
+    },
+    "605077.XSHG": {
+        "zjw": {
+            "industry_code": "C13",
+            "industry_name": "农副食品加工业"
+        },
+        "sw_l1": {
+            "industry_code": "801120",
+            "industry_name": "食品饮料I"
+        },
+        "sw_l2": {
+            "industry_code": "801124",
+            "industry_name": "食品加工II"
+        },
+        "sw_l3": {
+            "industry_code": "851244",
+            "industry_name": "食品综合III"
         }
     },
     "000507.XSHE": {
